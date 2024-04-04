@@ -3,17 +3,38 @@
     "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
-    <head>
+    <head>        
+        <script src="https://kit.fontawesome.com/6f0f753ce6.js" crossorigin="anonymous"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Welcome to Spring Web MVC project</title>
+        <link href="style/style-login.css" rel="stylesheet" type="text/css"/>
+        <title>Login Usuário</title>
     </head>
 
     <body>
-        <p>Hello! This is the default welcome page for a Spring Web MVC project.</p>
-        <p><i>To display a different welcome page for this project, modify</i>
-            <tt>index.jsp</tt> <i>, or create your own welcome page then change
-                the redirection in</i> <tt>redirect.jsp</tt> <i>to point to the new
-                welcome page and also update the welcome-file setting in</i>
-            <tt>web.xml</tt>.</p>
+        <main>
+            <div class="login">
+                <form action="">
+                    <h1>Login</h1>
+                    <div class="input-box">                        
+                        <input type="text" placeholder="Usuário">        
+                        <i class="fa-regular fa-user"></i>               
+                    </div>
+                    <div class="input-box">                        
+                        <input type="text" placeholder="Senha">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+
+                    <div class="remember-register">
+                        <label><input type="checkbox">Lembrar de mim</label>                      
+                    </div>
+
+                    <button type="submit" class="btn">LOGIN</button>
+
+                    <div class="register-link">
+                        <p>Não possui registro? <a href="#">Cadastre-se</a></p>
+                    </div>
+                </form>
+            </div>
+        </main>
     </body>
 </html>
