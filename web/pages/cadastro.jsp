@@ -17,11 +17,7 @@
         <main>
             <div class="cadastro">
                 <form action="">
-                    <h1>Cadastro</h1>
-                    <div class="input-box">
-                        <input type="text" placeholder="Email">
-                        <i class="fa-solid fa-envelope"></i>
-                    </div>
+                    <h1>Cadastro</h1>                   
                     <div class="input-box">                        
                         <input type="text" placeholder="Usuário">        
                         <i class="fa-regular fa-user"></i>               
@@ -29,6 +25,10 @@
                     <div class="input-box">                        
                         <input type="text" placeholder="Senha">
                         <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" placeholder="Email">
+                        <i class="fa-solid fa-envelope"></i>
                     </div>
                     <div class="input-box">
                         <input type="text" placeholder="CPF">

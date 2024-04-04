@@ -56,11 +56,7 @@ public final class cadastro_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <main>\n");
       out.write("            <div class=\"cadastro\">\n");
       out.write("                <form action=\"\">\n");
-      out.write("                    <h1>Cadastro</h1>\n");
-      out.write("                    <div class=\"input-box\">\n");
-      out.write("                        <input type=\"text\" placeholder=\"Email\">\n");
-      out.write("                        <i class=\"fa-solid fa-envelope\"></i>\n");
-      out.write("                    </div>\n");
+      out.write("                    <h1>Cadastro</h1>                   \n");
       out.write("                    <div class=\"input-box\">                        \n");
       out.write("                        <input type=\"text\" placeholder=\"Usuário\">        \n");
       out.write("                        <i class=\"fa-regular fa-user\"></i>               \n");
@@ -68,6 +64,10 @@ public final class cadastro_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    <div class=\"input-box\">                        \n");
       out.write("                        <input type=\"text\" placeholder=\"Senha\">\n");
       out.write("                        <i class=\"fa-solid fa-lock\"></i>\n");
+      out.write("                    </div>\n");
+      out.write("                    <div class=\"input-box\">\n");
+      out.write("                        <input type=\"text\" placeholder=\"Email\">\n");
+      out.write("                        <i class=\"fa-solid fa-envelope\"></i>\n");
       out.write("                    </div>\n");
       out.write("                    <div class=\"input-box\">\n");
       out.write("                        <input type=\"text\" placeholder=\"CPF\">\n");
