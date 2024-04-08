@@ -71,7 +71,7 @@ public class UsuarioDAO {
         }
     }
     
-    public void cadastro (Usuario u) {
+    public boolean cadastro (Usuario u) {
         try {
             Connection conexao = Conexao.conectar();
             PreparedStatement stmt = null;          
@@ -87,9 +87,54 @@ public class UsuarioDAO {
                                    
             stmt.close();
             conexao.close();            
-
+            return true;
         } catch (SQLException ex) {
-            System.out.println("Erro: " + ex);          
+            System.out.println("Erro: " + ex); 
+            return false;
         }        
+    }
+    
+    public void delete (Usuario u) {
+        try {
+            Connection conexao = Conexao.conectar();
+            PreparedStatement stmt = null;
+            
+            stmt = conexao.prepareStatement("DELETE FROM usuario WHERE idUsuario = ?");
+            stmt.setInt(1, u.getIdUsuario());
+
+            stmt.executeUpdate();
+
+            stmt.close();
+            conexao.close();
+        } catch(SQLException ex) {
+            System.out.println("Erro: " + ex);
+        }      
+    }
+    
+    public boolean update (Usuario u) {
+        try {
+            Connection conexao = Conexao.conectar();
+            PreparedStatement stmt = null;
+
+            stmt = conexao.prepareStatement("UPDATE usuario SET nome = ?, senha = ?, email = ?, cpf = ?, telefone = ? WHERE idUsuario = ? ");
+
+            stmt.setString(1, u.getNome());
+            stmt.setString(2, u.getSenha());
+            stmt.setString(3, u.getEmail());
+            stmt.setString(4, u.getCpf());
+            stmt.setString(5, u.getTelefone());
+
+            stmt.executeUpdate();
+
+            stmt.close();
+            conexao.close();
+            
+            return true;
+            
+            
+        }catch(SQLException ex) {
+            System.out.println("Erro: " + ex);
+            return false;
+        }
     }
 }
