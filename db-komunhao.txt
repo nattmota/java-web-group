@@ -1,0 +1,28 @@
+CREATE DATABASE db-lv 
+USE db-komunhao
+
+CREATE TABLE Livro (
+    idLivro INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(255),
+    autor VARCHAR(255),
+    preco FLOAT(10, 2)
+);
+
+CREATE TABLE Carrinho (
+    idCarrinho INT AUTO_INCREMENT PRIMARY KEY,
+    id_usuario INT,
+    id_livro INT,
+    quantidade INT,
+    FOREIGN KEY (id_usuario) REFERENCES Usuarios(id),
+    FOREIGN KEY (id_livro) REFERENCES Livros(id)
+);
+
+CREATE TABLE Usuario (
+   idUsuario INT AUTO_INCREMENT PRIMARY KEY,
+   nome VARCHAR(255),
+   email VARCHAR(255) UNIQUE,
+   senha VARCHAR(255),
+   cpf VARCHAR(14),
+   telefone VARCHAR(15)
+);
+
