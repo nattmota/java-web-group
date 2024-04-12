@@ -2,15 +2,23 @@ package conexao;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
 
 public class Conexao {
-    private static final String url = "jdbc:mysql://localhost:3306/db_ds";
+    private static final String url = "jdbc:mysql://localhost:3306/db_komunhao";
     private static final String usuario = "root";
     private static final String senha = "";
+    private static final String driver = "com.mysql.cj.jdbc.Driver";
     
-    public static Connection conectar()throws SQLException {
-        return(Connection) DriverManager.getConnection(url,usuario,senha);
+    public static Connection conectar() {
+        Connection conn = null;
+        try {
+            Class.forName(driver);
+            conn = DriverManager.getConnection(url,usuario,senha);
+        }catch(Exception e) {
+            e.printStackTrace();
+        }
+        
+        return conn;
     }
     
 }
