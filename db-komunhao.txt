@@ -26,3 +26,9 @@ CREATE TABLE Usuario (
    telefone VARCHAR(15)
 );
 
+INSERT INTO livro (titulo, autor, preco) VALUES ('O Senhor dos Anéis', 'J.R.R. Tolkien', 39.99);
+INSERT INTO livro (titulo, autor, preco) VALUES ('Harry Potter e a Pedra Filosofal', 'J.K. Rowling', 29.90);
+INSERT INTO livro (titulo, autor, preco) VALUES ('1984', 'George Orwell', 25.50);
+INSERT INTO livro (titulo, autor, preco) VALUES ('A Menina que Roubava Livros', 'Markus Zusak', 34.75);
+INSERT INTO livro (titulo, autor, preco) VALUES ('O Código Da Vinci', 'Dan Brown', 42.00);
+
