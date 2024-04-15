@@ -1,34 +1,79 @@
-CREATE DATABASE db-lv 
-USE db-komunhao
+drop database banco_komunhao;
+create database banco_komunhao;
+use banco_komunhao;
 
-CREATE TABLE Livro (
-    idLivro INT AUTO_INCREMENT PRIMARY KEY,
-    titulo VARCHAR(255),
-    autor VARCHAR(255),
-    preco FLOAT(10, 2)
+create table usuario (
+    idUsuario int primary key auto_increment,
+    nome varchar(100) not null,
+    email varchar(100) not null,
+    senha varchar(100) not null,
+    cpf char(11) not null,
+    telefone varchar(13)
 );
 
-CREATE TABLE Carrinho (
-    idCarrinho INT AUTO_INCREMENT PRIMARY KEY,
-    id_usuario INT,
-    id_livro INT,
-    quantidade INT,
-    FOREIGN KEY (id_usuario) REFERENCES Usuarios(id),
-    FOREIGN KEY (id_livro) REFERENCES Livros(id)
+create table endereco (
+    idEndereco int primary key auto_increment,
+    estado varchar(50) not null,
+    cidade varchar(50) not null,
+    cep char(9),
+    rua varchar(100) not null,
+    numero varchar(10) not null,
+    complemento varchar(100)
 );
 
-CREATE TABLE Usuario (
-   idUsuario INT AUTO_INCREMENT PRIMARY KEY,
-   nome VARCHAR(255),
-   email VARCHAR(255) UNIQUE,
-   senha VARCHAR(255),
-   cpf VARCHAR(14),
-   telefone VARCHAR(15)
+create table categoria (
+    idCategoria int primary key auto_increment,
+    nome varchar(100) not null
 );
 
-INSERT INTO livro (titulo, autor, preco) VALUES ('O Senhor dos Anéis', 'J.R.R. Tolkien', 39.99);
-INSERT INTO livro (titulo, autor, preco) VALUES ('Harry Potter e a Pedra Filosofal', 'J.K. Rowling', 29.90);
-INSERT INTO livro (titulo, autor, preco) VALUES ('1984', 'George Orwell', 25.50);
-INSERT INTO livro (titulo, autor, preco) VALUES ('A Menina que Roubava Livros', 'Markus Zusak', 34.75);
-INSERT INTO livro (titulo, autor, preco) VALUES ('O Código Da Vinci', 'Dan Brown', 42.00);
+create table produto (
+    idProduto int primary key auto_increment,
+    nome varchar(100) not null,
+    autor varchar(100) not null,
+    valor float(10,2) not null,
+    imagem longblob,
+    categoria int not null,
+    foreign key (categoria) references categoria(idCategoria)
+);
 
+
+
+create table estoque (
+    idEstoque int primary key auto_increment,
+    produto int not null,
+    quantidade int not null,
+    custo float(10,2) not null,
+    foreign key (produto) references produto(idProduto)
+);
+
+create table pedido (
+    idPedido int primary key auto_increment,
+    usuario int not null,
+    endereco_entrega int not null,
+    data_pedido date not null,
+    valorTotal float,
+    foreign key (endereco_entrega) references endereco(idEndereco),
+    foreign key (usuario) references usuario(idUsuario)
+);
+
+create table carrinho (
+	idCarrinho int primary key auto_increment,
+    usuario int,
+    foreign key (usuario) references usuario(idUsuario)
+);
+
+create table carrinho_produto (
+    idCarrinho_produto int primary key auto_increment,
+    carrinho int not null,
+    produto int not null,
+    foreign key (carrinho) references carrinho(idCarrinho),
+    foreign key (produto) references produto(idProduto)
+);
+
+create table produto_pedido (
+	idProduto_pedido int primary key auto_increment,
+    pedido int not null,
+    produto int not null,
+    foreign key (pedido) references pedido(idPedido),
+    foreign key (produto) references produto(idProduto)
+);
