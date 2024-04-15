@@ -77,3 +77,20 @@ create table produto_pedido (
     foreign key (pedido) references pedido(idPedido),
     foreign key (produto) references produto(idProduto)
 );
+
+INSERT INTO produto (nome, autor, valor) 
+VALUES ('Livro de Matemática Avançada', 'João Silva', 49.99);
+
+INSERT INTO produto (nome, autor, valor) 
+VALUES ('Camiseta Geek', 'Maria Santos', 29.99);
+
+INSERT INTO produto (nome, autor, valor) 
+VALUES ('Fones de Ouvido Bluetooth', 'Pedro Oliveira', 79.99);
+
+INSERT INTO produto (nome, autor, valor) 
+VALUES ('Mouse Gamer RGB', 'Ana Pereira', 59.99);
+
+INSERT INTO produto (nome, autor, valor) 
+VALUES ('Caneca Personalizada', 'Luiz Ferreira', 12.99);
+
+
