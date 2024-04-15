@@ -31,7 +31,7 @@
                         <label><input type="checkbox">Lembrar de mim</label>                      
                     </div>
 
-                    <button type="submit" class="btn">LOGIN</button>
+                    <button type="submit" class="btn"><a href="./home">LOGIN</a></button>
 
                     <div class="register-link">
                         <p>Não possui registro? <a href="./cadastro">Cadastre-se</a></p>

@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"); /* FONTE DO DAVI GIBELATO */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap'); /* font-family: "Rubik", sans-serif */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap'); /* font-family: "Roboto Slab", sans-serif */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap'); /* font-family: "Work Sans", sans-serif */
 
 /* RESET PADRÃO DO HTML/CSS WEBSITE */
 * {
@@ -90,6 +93,10 @@ main {
     font-size: 16px;
     color: #333;
     font-weight: 600;
+}
+
+.login button a {
+    text-decoration: none;
 }
 
 .login .register-link {

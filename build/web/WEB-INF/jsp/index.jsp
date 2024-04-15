@@ -1,14 +1,14 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-    "http://www.w3.org/TR/html4/loose.dtd">
 
-<html>
+<html lang="pt-br">
     <head>        
         <meta charset="UTF-8">
         <script src="https://kit.fontawesome.com/6f0f753ce6.js" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <link href="style/style-index.css" rel="stylesheet" type="text/css"/>
+        <link href="style/header.css" rel="stylesheet" type="text/css"/>
+        <link href="style/footer.css" rel="stylesheet" type="text/css"/>
         <title>Komunhão Livraria</title>
     </head>
 
@@ -240,9 +240,14 @@
         <div class="contato">
             <h4>Entre em contato</h4>
             <a href=""><i class="fa-brands fa-whatsapp">5543999752103</i></a>
+            <br/>
             <a href=""><i class="fa-solid fa-phone"></i>4330283484</a>
-            <i class="fa-solid fa-envelope">contato@komunhao.com.br</i>
-            <i class="fa-solid fa-location-dot">Rua Barão de Loreto, 15 Vila Fujita - Londrina - PR</i>
+            <br/>
+            <i class="fa-solid fa-envelope"></i>
+            <span>contato@komunhao.com.br</span>
+            <br/>
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Rua Barão de Loreto, 15 Vila Fujita - Londrina - PR</span>
         </div>
         <div class="sociais">
             <h4>Permaneça conectado</h4>
@@ -251,7 +256,9 @@
         </div>
     </section>
     <footer>
-        s
+        <div class="text-footer">
+            <span>Copyright KOMUNHÃO LIVRARIA CRISTÃ - 20860874000126 - 2024. Todos os direitos reservados.</span>
+        </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
