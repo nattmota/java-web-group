@@ -46,7 +46,7 @@
                     <button type="submit" class="btn">CADASTRAR</button>
 
                     <div class="register-link">
-                        <p>Já possui conta? <a href="#">Login</a></p>
+                        <p>Já possui conta? <a href="./login">Login</a></p>
                     </div>
                 </form>
             </div>

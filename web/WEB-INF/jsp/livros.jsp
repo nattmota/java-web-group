@@ -19,19 +19,19 @@
                 <h1>Lista de livros</h1>
             </div>
             <c:forEach items="${livros}" var="livro"> 
-                <div id="${livro.idLivro}">
+                <div id="${livro.idProduto}">
                     <table>
                 <tr>
                     <th>ID</th>
-                    <th>Título</th>
+                    <th>Nome</th>
                     <th>Autor</th>
-                    <th>Preço</th>
+                    <th>Valor</th>
                 </tr>
                 <tr>
-                    <td>${livro.idLivro}</td>
-                    <td>${livro.titulo}</td>
+                    <td>${livro.idProduto}</td>
+                    <td>${livro.nome}</td>
                     <td>${livro.autor}</td>
-                    <td>${livro.preco}</td>
+                    <td>${livro.valor}</td>
                 </tr>
             </table>
                 <br></br>

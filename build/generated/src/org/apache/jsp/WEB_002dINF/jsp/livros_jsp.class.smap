@@ -1,0 +1,16 @@
+SMAP
+livros_jsp.java
+JSP
+*S JSP
+*F
++ 0 livros.jsp
+WEB-INF/jsp/livros.jsp
+*L
+5,17:54
+21:95,11
+22:106,3
+23,8:109
+31,4:117,3
+35,5:129
+39,5:73
+*E

@@ -13,16 +13,56 @@
         <load-on-startup>2</load-on-startup>
     </servlet>
     <servlet>
-        <servlet-name>ListaLivrosController</servlet-name>
-        <servlet-class>controller.ListaLivrosController</servlet-class>
+        <servlet-name>CadastroController</servlet-name>
+        <servlet-class>controller.CadastroController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LoginController</servlet-name>
+        <servlet-class>controller.LoginController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>HomeController</servlet-name>
+        <servlet-class>controller.HomeController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>LivroController</servlet-name>
+        <servlet-class>controller.LivroController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProdutoCategoriasController</servlet-name>
+        <servlet-class>controller.ProdutoCategoriasController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ProdutosController</servlet-name>
+        <servlet-class>controller.ProdutosController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>*.htm</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>ListaLivrosController</servlet-name>
+        <servlet-name>CadastroController</servlet-name>
+        <url-pattern>/cadastro</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginController</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HomeController</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LivroController</servlet-name>
         <url-pattern>/lista-livros</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProdutoCategoriasController</servlet-name>
+        <url-pattern>/produtos-categorias</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ProdutosController</servlet-name>
+        <url-pattern>/produtos</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
