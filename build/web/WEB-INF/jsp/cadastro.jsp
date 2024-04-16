@@ -16,7 +16,7 @@
     <body>
         <main>
             <div class="cadastro">
-                <form action="">
+                <form action="cadastrar">
                     <h1>Cadastro</h1>                   
                     <div class="input-box">                        
                         <input type="text" placeholder="Usuário">        
@@ -43,7 +43,7 @@
                         <label><input type="checkbox">Lembrar de mim</label>                      
                     </div>
 
-                    <button type="submit" class="btn"><a href="./home">CADASTRAR</a></button>
+                    <button type="submit" class="btn">CADASTRAR</button>
 
                     <div class="register-link">
                         <p>Já possui conta? <a href="./login">Login</a></p>

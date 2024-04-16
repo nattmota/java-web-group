@@ -19,11 +19,11 @@
                 <form action="logar">
                     <h1>Login</h1>
                     <div class="input-box">                        
-                        <input type="text" placeholder="Usuário">        
+                        <input type="text" id="username" placeholder="Usuário">        
                         <i class="fa-regular fa-user"></i>               
                     </div>
                     <div class="input-box">                        
-                        <input type="text" placeholder="Senha">
+                        <input type="text" id="password" placeholder="Senha">
                         <i class="fa-solid fa-lock"></i>
                     </div>
 
@@ -31,7 +31,7 @@
                         <label><input type="checkbox">Lembrar de mim</label>                      
                     </div>
 
-                    <button type="submit" class="btn"><a href="./home">LOGIN</a></button>
+                    <button type="submit" class="btn">LOGIN</button>
 
                     <div class="register-link">
                         <p>Não possui registro? <a href="./cadastro">Cadastre-se</a></p>

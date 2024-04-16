@@ -94,10 +94,11 @@ main {
     font-size: 16px;
     color: #333;
     font-weight: 600;
+    transition: background-color 0.3s ease;
 }
 
-.cadastro button a {
-    text-decoration: none;
+.cadastro .btn:hover {
+    background-color: gray;
 }
 
 .cadastro .register-link {
