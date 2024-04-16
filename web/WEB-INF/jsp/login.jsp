@@ -16,7 +16,7 @@
     <body>
         <main>
             <div class="login">
-                <form action="">
+                <form action="logar">
                     <h1>Login</h1>
                     <div class="input-box">                        
                         <input type="text" placeholder="Usuário">        

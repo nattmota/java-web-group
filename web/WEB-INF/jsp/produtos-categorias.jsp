@@ -27,45 +27,48 @@
                 <p>Edificando vidas através da literatura cristã</p>
             </div>
         </div>
-    <header>
-        <div class="header-cima">
-            <div class="logo">
-                <img src="./assets/Logo Site Komunhão.png" alt="logo-livraria">
-            </div>
-            <div class="input-box">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="O que você está buscando?" >
-            </div>
+        <header>
+            <div class="header-cima">
+                <div class="logo">
+                    <a href="./home"><img src="./assets/Logo Site Komunhão.png" alt="logo-livraria"></a>
+                </div>
+                <div class="input-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="O que você está buscando?" >
+                </div>
 
-            <nav class="nav-1">         
+                <nav class="nav-1">         
+                    <ul>
+                        <div class="element-nav-1">
+                            <li><i class="fa-regular fa-comments"></i><a href="./login">Login</a></li>
+                        </div>
+                        <div class="element-nav-1">
+                            <li><i class="fa-regular fa-user"></i><a href="#">Minha conta</a></li>
+                        </div>
+                        <div class="element-nav-1">
+                            <li><i class="fa-solid fa-cart-shopping"></i><a href="#">Meu carrinho</a></li>
+                        </div>
+                        <div class="element-nav-1">
+                            <li><i class="fa-solid fa-right-from-bracket"></i><a href="./login">Logout</a></li>
+                        </div>
+                    </ul>
+                </nav>
+            </div>
+            <hr/>
+            <nav class="header-baixo">
                 <ul>
-                    <div class="element-nav-1">
-                        <li><i class="fa-regular fa-comments"></i><a href="#">Atendimento</a></li>
-                    </div>
-                    <div class="element-nav-1">
-                        <li><i class="fa-regular fa-user"></i><a href="./login">Minha conta</a></li>
-                    </div>
-                    <div class="element-nav-1">
-                        <li><i class="fa-solid fa-cart-shopping"></i><a href="#">Meu carrinho</a></li>
-                    </div>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Livros <i class="fa-solid fa-chevron-down"></i></a></li>
+                    <li><a href="#">Papelaria <i class="fa-solid fa-chevron-down"></i></a></li>
+                    <li><a href="#">Presentes <i class="fa-solid fa-chevron-down"></i></a></li>
+                    <li><a href="#">Bíblias <i class="fa-solid fa-chevron-down"></i></a></li>
+                    <li><a href="#">Brinquedos Educativos <i class="fa-solid fa-chevron-down"></i></a></li>
+                    <li><a href="#">Quem somos</a></li>
+                    <li><a href="#">Contato</a></li>                
                 </ul>
             </nav>
-        </div>
-        <hr/>
-        <nav class="header-baixo">
-            <ul>
-                <li><a href="#">Início</a></li>
-                <li><a href="#">Livros <i class="fa-solid fa-chevron-down"></i></a></li>
-                <li><a href="#">Papelaria <i class="fa-solid fa-chevron-down"></i></a></li>
-                <li><a href="#">Presentes <i class="fa-solid fa-chevron-down"></i></a></li>
-                <li><a href="#">Bíblias <i class="fa-solid fa-chevron-down"></i></a></li>
-                <li><a href="#">Brinquedos Educativos <i class="fa-solid fa-chevron-down"></i></a></li>
-                <li><a href="#">Quem somos</a></li>
-                <li><a href="#">Contato</a></li>                
-            </ul>
-        </nav>
-        <br/>
-    </header>
+            <br/>
+        </header>
 
         <main>
             <div class="center-text">

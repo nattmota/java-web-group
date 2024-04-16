@@ -9,7 +9,6 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/6f0f753ce6.js" crossorigin="anonymous"></script>     
         <link href="style/style-produto.css" rel="stylesheet" type="text/css"/>
@@ -30,7 +29,7 @@
     <header>
         <div class="header-cima">
             <div class="logo">
-                <img src="./assets/Logo Site Komunhão.png" alt="logo-livraria">
+                <a href="./home"><img src="./assets/Logo Site Komunhão.png" alt="logo-livraria"></a>
             </div>
             <div class="input-box">
                 <i class="fa-solid fa-magnifying-glass"></i>
@@ -38,18 +37,21 @@
             </div>
 
             <nav class="nav-1">         
-                <ul>
-                    <div class="element-nav-1">
-                        <li><i class="fa-regular fa-comments"></i><a href="#">Atendimento</a></li>
-                    </div>
-                    <div class="element-nav-1">
-                        <li><i class="fa-regular fa-user"></i><a href="./login">Minha conta</a></li>
-                    </div>
-                    <div class="element-nav-1">
-                        <li><i class="fa-solid fa-cart-shopping"></i><a href="#">Meu carrinho</a></li>
-                    </div>
-                </ul>
-            </nav>
+                    <ul>
+                        <div class="element-nav-1">
+                            <li><i class="fa-regular fa-comments"></i><a href="./login">Login</a></li>
+                        </div>
+                        <div class="element-nav-1">
+                            <li><i class="fa-regular fa-user"></i><a href="#">Minha conta</a></li>
+                        </div>
+                        <div class="element-nav-1">
+                            <li><i class="fa-solid fa-cart-shopping"></i><a href="#">Meu carrinho</a></li>
+                        </div>
+                        <div class="element-nav-1">
+                            <li><i class="fa-solid fa-right-from-bracket"></i><a href="./login">Logout</a></li>
+                        </div>
+                    </ul>
+                </nav>
         </div>
         <hr/>
         <nav class="header-baixo">

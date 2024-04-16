@@ -96,10 +96,11 @@ header {
     font-family: "Rubik", sans-serif;
 }
 
+
 .header-cima .nav-1 ul {
     width: 300px;
     display: flex;
-    justify-content: space-between;
+    gap: 50px;
 }
 
 .header-cima .nav-1 ul .element-nav-1 {

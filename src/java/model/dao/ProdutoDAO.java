@@ -61,7 +61,37 @@ public class ProdutoDAO {
                 Produto p = new Produto();
                 p.setIdProduto(rs.getInt("idProduto"));
                 p.setNome(rs.getString("nome"));
-                p.setAutor(rs.getString("autor"));
+                p.setValor(rs.getFloat("valor"));
+                produtos.add(p);
+            }
+
+            rs.close();
+            stmt.close();
+            conexao.close();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
+        return produtos;
+    }
+    
+    public List<Produto> listarTodos8() {
+        List<Produto> produtos = new ArrayList();
+
+        try {
+            Connection conexao = Conexao.conectar();
+            PreparedStatement stmt = null;
+            ResultSet rs = null;
+            String query = "SELECT * FROM produto WHERE categoria = 1 LIMIT 8";
+
+            stmt = conexao.prepareStatement(query);
+            rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                Produto p = new Produto();
+                p.setIdProduto(rs.getInt("idProduto"));
+                p.setNome(rs.getString("nome"));
                 p.setValor(rs.getFloat("valor"));
                 produtos.add(p);
             }
@@ -170,12 +200,11 @@ public class ProdutoDAO {
             Connection conexao = Conexao.conectar();
             PreparedStatement stmt = null;
 
-            stmt = conexao.prepareStatement("INSERT INTO produto (nome, autor, valor, imagem, categoria) VALUES (?, ?, ?, ?, ?)");
+            stmt = conexao.prepareStatement("INSERT INTO produto (nome, valor, imagem, categoria) VALUES (?, ?, ?, ?)");
             stmt.setString(1, p.getNome());
-            stmt.setString(2, p.getAutor());
-            stmt.setFloat(3, p.getValor());
-            stmt.setBlob(4, p.getImagem());
-            stmt.setInt(5, p.getCategoria());
+            stmt.setFloat(2, p.getValor());
+            stmt.setBlob(3, p.getImagem());
+            stmt.setInt(4, p.getCategoria());
             stmt.executeUpdate();
 
             stmt.close();
@@ -190,13 +219,12 @@ public class ProdutoDAO {
             Connection conexao = Conexao.conectar();
             PreparedStatement stmt = null;
 
-            stmt = conexao.prepareStatement("UPDATE produto SET nome = ?, autor = ?, valor = ?, imagem = ?, categoria = ? WHERE idProduto = ?");
+            stmt = conexao.prepareStatement("UPDATE produto SET nome = ?, valor = ?, imagem = ?, categoria = ? WHERE idProduto = ?");
             stmt.setString(1, p.getNome());
-            stmt.setString(2, p.getAutor());
-            stmt.setFloat(3, p.getValor());
-            stmt.setBlob(4, p.getImagem());
-            stmt.setInt(5, p.getCategoria());
-            stmt.setInt(6, p.getIdProduto());
+            stmt.setFloat(2, p.getValor());
+            stmt.setBlob(3, p.getImagem());
+            stmt.setInt(4, p.getCategoria());
+            stmt.setInt(5, p.getIdProduto());
 
             stmt.executeUpdate();
 

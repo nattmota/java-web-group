@@ -5,7 +5,6 @@ import java.sql.Blob;
 public class Produto {
     private int idProduto;
     private String nome;
-    private String autor;
     private float valor;
     private Blob imagem;
     private int categoria;
@@ -13,10 +12,9 @@ public class Produto {
     public Produto() {
     }
 
-    public Produto(int idProduto, String nome, String autor, float valor, Blob imagem, int categoria) {
+    public Produto(int idProduto, String nome, float valor, Blob imagem, int categoria) {
         this.idProduto = idProduto;
         this.nome = nome;
-        this.autor = autor;
         this.valor = valor;
         this.imagem = imagem;
         this.categoria = categoria;
@@ -36,14 +34,6 @@ public class Produto {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public String getAutor() {
-        return autor;
-    }
-
-    public void setAutor(String autor) {
-        this.autor = autor;
     }
 
     public float getValor() {

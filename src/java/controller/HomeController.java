@@ -7,11 +7,14 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.bean.Produto;
+import model.dao.ProdutoDAO;
 
 /**
  *
@@ -33,6 +36,12 @@ public class HomeController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         
         String url = "/WEB-INF/jsp/index.jsp";
+        
+        ProdutoDAO dao = new ProdutoDAO();
+        List<Produto> produtoLista = dao.listarTodos8();
+        
+        request.setAttribute("produtos", produtoLista);
+        
         
         RequestDispatcher d = getServletContext().getRequestDispatcher(url);
         d.forward(request, response);
