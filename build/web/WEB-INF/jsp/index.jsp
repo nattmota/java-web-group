@@ -239,20 +239,28 @@
         </div>
         <div class="contato">
             <h4>Entre em contato</h4>
-            <a href=""><i class="fa-brands fa-whatsapp">5543999752103</i></a>
+            <div class="div-contato">
+                <a href=""><i class="fa-brands fa-whatsapp"></i>5543999752103</a>
+            </div>
             <br/>
-            <a href=""><i class="fa-solid fa-phone"></i>4330283484</a>
+            <div class="div-contato">
+                <a href=""><i class="fa-solid fa-phone"></i>(43) 3028-3484</a>
+            </div>
             <br/>
-            <i class="fa-solid fa-envelope"></i>
-            <span>contato@komunhao.com.br</span>
+            <div class="div-contato">
+                <i class="fa-solid fa-envelope"></i>
+                <span>contato@komunhao.com.br</span>
+            </div>
             <br/>
-            <i class="fa-solid fa-location-dot"></i>
-            <span>Rua Barão de Loreto, 15 Vila Fujita - Londrina - PR</span>
+            <div class="div-contato">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Rua Barão de Loreto, 15 Vila Fujita - Londrina - PR</span>
+            </div>
         </div>
         <div class="sociais">
             <h4>Permaneça conectado</h4>
             <button><a href="#"><i class="fa-brands fa-instagram"></i></a></button>
-            <button><a href="#"></a><i class="fa-brands fa-facebook"></i></button>
+            <button><a href="#"><i class="fa-brands fa-facebook"></i></a></button>
         </div>
     </section>
     <footer>

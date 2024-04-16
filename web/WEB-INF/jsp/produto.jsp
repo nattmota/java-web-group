@@ -5,14 +5,16 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
+
+<html lang="pt-br">
     <head>
+        <meta charset="UTF-8">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <script src="https://kit.fontawesome.com/6f0f753ce6.js" crossorigin="anonymous"></script>
-        <link href="style/header.css" rel="stylesheet" type="text/css"/>
-        <link href="style/footer.css" rel="stylesheet" type="text/css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/6f0f753ce6.js" crossorigin="anonymous"></script>     
         <link href="style/style-produto.css" rel="stylesheet" type="text/css"/>
+        <link href="style/header.css" rel="stylesheet" type="text/css"/>
+        <link href="style/footer.css" rel="stylesheet" type="text/css"/>       
         <title>Página do Produto</title>
     </head>
     <body>
@@ -92,19 +94,34 @@
         </div>
         <div class="contato">
             <h4>Entre em contato</h4>
-            <a href=""><i class="fa-brands fa-whatsapp">5543999752103</i></a>
-            <a href=""><i class="fa-solid fa-phone"></i>4330283484</a>
-            <i class="fa-solid fa-envelope">contato@komunhao.com.br</i>
-            <i class="fa-solid fa-location-dot">Rua Barão de Loreto, 15 Vila Fujita - Londrina - PR</i>
+            <div class="div-contato">
+                <a href=""><i class="fa-brands fa-whatsapp"></i>5543999752103</a>
+            </div>
+            <br/>
+            <div class="div-contato">
+                <a href=""><i class="fa-solid fa-phone"></i>(43) 3028-3484</a>
+            </div>
+            <br/>
+            <div class="div-contato">
+                <i class="fa-solid fa-envelope"></i>
+                <span>contato@komunhao.com.br</span>
+            </div>
+            <br/>
+            <div class="div-contato">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Rua Barão de Loreto, 15 Vila Fujita - Londrina - PR</span>
+            </div>
         </div>
         <div class="sociais">
             <h4>Permaneça conectado</h4>
             <button><a href="#"><i class="fa-brands fa-instagram"></i></a></button>
-            <button><a href="#"></a><i class="fa-brands fa-facebook"></i></button>
+            <button><a href="#"><i class="fa-brands fa-facebook"></i></a></button>
         </div>
     </section>
     <footer>
-        s
+        <div class="text-footer">
+            <span>Copyright KOMUNHÃO LIVRARIA CRISTÃ - 20860874000126 - 2024. Todos os direitos reservados.</span>
+        </div>
     </footer>
     </body>
 </html>

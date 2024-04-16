@@ -2,6 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap'); /* font-family: "Roboto Slab", sans-serif */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap'); /* font-family: "Work Sans", sans-serif */
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .upper-footer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -17,12 +23,63 @@
 }
 
 .upper-footer a {
-    font-family: "Roboto Slab", sans-serif;
+    font-family: "Rubik", sans-serif;
     text-decoration: none;
+    color: #00326D;
 }
 
 .upper-footer .column-dp h4 {
     margin-bottom: 20px;
+}
+
+.upper-footer .column-empresa h4 {
+    margin-bottom: 20px;
+}
+
+.upper-footer .contato h4 {
+    margin-bottom: 30px;
+}
+
+.upper-footer .contato .div-contato a {
+    color:#00326D;
+    font-size: 17px;
+} 
+
+.upper-footer .contato .div-contato a i {
+    margin-right: 6px;
+    font-size: 17px;
+}
+
+.upper-footer .contato .div-contato span {
+    color: #00326D;
+    font-family: "Roboto Slab";
+}
+
+.upper-footer .contato .div-contato i {
+    color: #00326D;
+}
+
+.upper-footer .sociais h4 {
+    margin-bottom: 20px;
+}
+
+.upper-footer .sociais a i {
+    color: #fff;
+    font-size: 17px;
+}
+
+.upper-footer .sociais button {
+    background-color: #00326D;
+    border-radius: 50%;
+    border: none;
+    width: 50px;
+    height: 50px;
+    margin-right: 0 15px;
+    transition: opacity 0.3s;
+}
+
+.upper-footer .sociais button:hover {
+    opacity: 0.8; 
 }
 
 footer {

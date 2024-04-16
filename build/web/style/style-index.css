@@ -7,7 +7,7 @@ main {
 }
 .show-products {
     width: 100%;
-    height: 135vh;
+    height: 150vh;
     background-color: #ecf0f1;
 }
 
@@ -160,5 +160,19 @@ main .instagram-section .to-instagram button {
     border: 1px solid #00326D;
     border-radius: 30px;
     padding: 5px 30px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
+main .instagram-section .to-instagram button a:hover {
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+    font-family: "Roboto Slab", sans-serif;
+}
+
+main .instagram-section .to-instagram button:hover {
+    background-color: #00326D;
+    border: 1px solid #00326D;
+    border-radius: 30px;
+    padding: 5px 30px;
+}
