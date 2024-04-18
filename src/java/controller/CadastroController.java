@@ -12,6 +12,8 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.bean.Usuario;
+import model.dao.UsuarioDAO;
 
 /**
  *
@@ -52,25 +54,37 @@ public class CadastroController extends HttpServlet {
         processRequest(request, response);
     }
 
-    /**
-     * Handles the HTTP <code>POST</code> method.
-     *
-     * @param request servlet request
-     * @param response servlet response
-     * @throws ServletException if a servlet-specific error occurs
-     * @throws IOException if an I/O error occurs
-     */
+   
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        
-        
-        
-        
-        
-        
-        processRequest(request, response);
+        String url = request.getServletPath();
+        if(url.equals("/cadastrar")) {
+            String nextPage = "/WEB-INF/jsp/login.jsp";
+            Usuario u = new Usuario();
+            UsuarioDAO dao = new UsuarioDAO();
+            
+            u.setNome(request.getParameter("usuario"));
+            u.setSenha(request.getParameter("senha"));
+            u.setEmail(request.getParameter("email"));
+            u.setCpf(request.getParameter("cpf"));
+            u.setTelefone(request.getParameter("telefone"));
+            
+            try {
+                dao.cadastro(u);
+                RequestDispatcher d = getServletContext().getRequestDispatcher(nextPage);
+                d.forward(request, response);
+                              
+            }catch(Exception e) {
+                nextPage = "/WEB-INF/jsp/login.jsp";
+                request.setAttribute("errorMessage", "Usuário ou senha inválidos");
+                RequestDispatcher d = getServletContext().getRequestDispatcher(nextPage);
+                d.forward(request, response);
+            }
+        } else {
+            processRequest(request, response);
+        }      
     }
 
     

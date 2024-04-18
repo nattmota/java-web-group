@@ -16,14 +16,14 @@
     <body>
         <main>
             <div class="login">
-                <form action="logar">
+                <form action="logar" method="get">
                     <h1>Login</h1>
                     <div class="input-box">                        
-                        <input type="text" id="username" placeholder="Usuário">        
+                        <input type="text" name="username" id="username" placeholder="Usuário">        
                         <i class="fa-regular fa-user"></i>               
                     </div>
                     <div class="input-box">                        
-                        <input type="text" id="password" placeholder="Senha">
+                        <input type="text" name="password" id="password" placeholder="Senha">
                         <i class="fa-solid fa-lock"></i>
                     </div>
 

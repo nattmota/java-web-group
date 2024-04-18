@@ -16,26 +16,26 @@
     <body>
         <main>
             <div class="cadastro">
-                <form action="cadastrar">
+                <form action="cadastrar" method="post">
                     <h1>Cadastro</h1>                   
                     <div class="input-box">                        
-                        <input type="text" placeholder="Usuário">        
+                        <input type="text" name="usuario" id="usuario" placeholder="Usuário">        
                         <i class="fa-regular fa-user"></i>               
                     </div>
                     <div class="input-box">                        
-                        <input type="text" placeholder="Senha">
+                        <input type="text" name="senha" id="senha" placeholder="Senha">
                         <i class="fa-solid fa-lock"></i>
                     </div>
                     <div class="input-box">
-                        <input type="text" placeholder="Email">
+                        <input type="text" name="email" id="email" placeholder="Email">
                         <i class="fa-solid fa-envelope"></i>
                     </div>
                     <div class="input-box">
-                        <input type="text" placeholder="CPF">
+                        <input type="text" name="cpf" id="cpf" placeholder="CPF">
                         <i class="fa-solid fa-key"></i>
                     </div>
                     <div class="input-box">
-                        <input type="text" placeholder="Telefone">
+                        <input type="text" name="telefone" id="telefone" placeholder="Telefone">
                         <i class="fa-solid fa-phone"></i>
                     </div>
 

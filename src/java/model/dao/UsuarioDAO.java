@@ -89,7 +89,7 @@ public class UsuarioDAO {
             return true;
         } catch (SQLException ex) {
             System.out.println("Erro: " + ex);
-            return false;
+            return false;   
         }
     }
 

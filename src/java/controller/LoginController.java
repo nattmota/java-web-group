@@ -6,6 +6,7 @@
 package controller;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -64,8 +65,7 @@ public class LoginController extends HttpServlet {
                 Usuario userAutenticado = dao.login(u);
                 
                 if(userAutenticado != null && !userAutenticado.getNome().isEmpty()) {
-                    RequestDispatcher d = getServletContext().getRequestDispatcher(nextPage);
-                    d.forward(request, response);
+                    response.sendRedirect("./home");                   
                 } else {
                     nextPage = "/WEB-INF/jsp/login.jsp";
                     request.setAttribute("errorMessage", "Usuário ou senha inválidos");
@@ -87,15 +87,11 @@ public class LoginController extends HttpServlet {
    
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        processRequest(request, response);
+            throws ServletException, IOException {    
+            processRequest(request, response);
     }
 
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
+    
     @Override
     public String getServletInfo() {
         return "Short description";
