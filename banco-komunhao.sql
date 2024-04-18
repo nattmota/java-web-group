@@ -74,28 +74,56 @@ create table produto_pedido (
 	idProduto_pedido int primary key auto_increment,
     pedido int not null,
     produto int not null,
-    foreign key (pedido) references pedido(idPedido),produto
+    foreign key (pedido) references pedido(idPedido),
     foreign key (produto) references produto(idProduto)
 );
 
--- Inserção 1
-INSERT INTO produto (nome, autor, valor) 
-VALUES ('Livro de Matemática Avançada', 'João Silva', 49.99);
+-- INSERT CATEGORIAS
+INSERT INTO categoria (nome)
+VALUES ('Evangélicos');
 
--- Inserção 2
-INSERT INTO produto (nome, autor, valor) 
-VALUES ('Camiseta Geek', 'Maria Santos', 29.99);
-
--- Inserção 3
-INSERT INTO produto (nome, autor, valor) 
-VALUES ('Fones de Ouvido Bluetooth', 'Pedro Oliveira', 79.99);
-
--- Inserção 4
-INSERT INTO produto (nome, autor, valor) 
-VALUES ('Mouse Gamer RGB', 'Ana Pereira', 59.99);
-
--- Inserção 5
-INSERT INTO produto (nome, autor, valor) 
-VALUES ('Caneca Personalizada', 'Luiz Ferreira', 12.99);
+-- INSERT USUARIOS
+INSERT INTO usuario (nome,email,senha,cpf,telefone)
+VALUES ('admin','admin','admin','082','4399');
 
 
+-- INSERT PRODUTOS
+-- Insert 1
+INSERT INTO produto (nome, autor, valor, categoria)
+VALUES ('O Evangelho Segundo Jesus Cristo', 'José Saramago', 25.99, 1);
+
+-- Insert 2
+INSERT INTO produto (nome, autor, valor, categoria)
+VALUES ('Mere Christianity', 'C.S. Lewis', 15.50, 1);
+
+-- Insert 3
+INSERT INTO produto (nome, autor, valor, categoria)
+VALUES ('The Purpose Driven Life', 'Rick Warren', 20.75, 1);
+
+-- Insert 4
+INSERT INTO produto (nome, autor, valor, categoria)
+VALUES ('O Peregrino', 'John Bunyan', 18.99, 1);
+
+-- Insert 5
+INSERT INTO produto (nome, autor, valor, categoria)
+VALUES ('Cristianismo Puro e Simples', 'C.S. Lewis', 16.25, 1);
+
+-- Insert 6
+INSERT INTO produto (nome, autor, valor, categoria)
+VALUES ('O Código Da Vinci', 'Dan Brown', 22.99, 1);
+
+-- Insert 7
+INSERT INTO produto (nome, autor, valor, categoria)
+VALUES ('O Exorcista', 'William Peter Blatty', 19.75, 1);
+
+-- Insert 8
+INSERT INTO produto (nome, autor, valor, categoria)
+VALUES ('De Volta à Cabana', 'William P. Young', 18.50, 1);
+
+-- Insert 9
+INSERT INTO produto (nome, autor, valor, categoria)
+VALUES ('Deixados para Trás', 'Tim LaHaye, Jerry B. Jenkins', 24.99, 1);
+
+-- Insert 10
+INSERT INTO produto (nome, autor, valor, categoria)
+VALUES ('A Bíblia Sagrada', 'Diversos Autores', 30.00, 1);
