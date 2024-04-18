@@ -1,6 +1,6 @@
 <%-- 
-    Document   : ProdutosCategorias
-    Created on : 15/04/2024, 15:44:18
+    Document   : cadastro-produto
+    Created on : 18/04/2024, 15:27:22
     Author     : Senai
 --%>
 
@@ -8,15 +8,14 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
         <script src="https://kit.fontawesome.com/6f0f753ce6.js" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link href="./style/style-produtos-categorias.css" rel="stylesheet" type="text/css"/>
-        <link href="./style/header.css" rel="stylesheet" type="text/css"/>
         <link href="./style/footer.css" rel="stylesheet" type="text/css"/>
-        <title>Página de Produtos/Categorias</title>
+        <link href="./style/header.css" rel="stylesheet" type="text/css"/>
+        <link href="./style/style-cadastro-produto.css" rel="stylesheet" type="text/css"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Cadastro Produto</title>
     </head>
     <body>
         <div class="upper-header">
@@ -70,13 +69,32 @@
             </nav>
             <br/>
         </header>
-
         <main>
-            <div class="center-text">
-                <h1>Produtos/Categorias</h1>
+            <!-- <div class="center-text">
+                <h1>Cadastro de Produtos</h1>
+            </div> -->
+            <div class="form-cadastro-produtos">
+                <form action="">
+                    <h1>Cadastro de Produtos</h1>
+                    <div class="input-box">
+                        <input type="text" name="nome-livro" id="nome-livro" placeholder="Nome">
+                    </div>
+                    <div class="input-box">
+                        <input type="text" name="autor-livro" id="autor-livro" placeholder="Autor">
+                    </div>
+                    <div class="input-box">
+                        <input type="text" name="valor" id="valor" placeholder="Preço">
+                    </div>
+                    <div class="input-box">
+                        <input type="text" name="categoria" id="categoria" placeholder="Categoria">
+                    </div>
+                    <div class="input-image">
+
+                    </div>
+                    <button>ADICIONAR</button>
+                </form>
             </div>
         </main>
-
         <section class="upper-footer">
             <div class="column-dp">
                 <h4>Departamentos</h4>
