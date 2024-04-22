@@ -127,3 +127,39 @@ VALUES ('Deixados para Trás', 'Tim LaHaye, Jerry B. Jenkins', 24.99, 1);
 -- Insert 10
 INSERT INTO produto (nome, autor, valor, categoria)
 VALUES ('A Bíblia Sagrada', 'Diversos Autores', 30.00, 1);
+
+-- Insert 11
+INSERT INTO produto (nome, autor, valor, categoria) 
+VALUES ('Mereça Ser Feliz', 'Pastor Claudio Duarte', 19.99, 1);
+
+-- Insert 12
+INSERT INTO produto (nome, autor, valor, categoria) 
+VALUES ('O Poder da Oração Transformadora', 'Stormie Omartian', 29.99, 1);
+
+-- Insert 13
+INSERT INTO produto (nome, autor, valor, categoria) 
+VALUES ('Oração: A Chave do Avivamento', 'Josué Gonçalves', 22.50, 1);
+
+-- Insert 14
+INSERT INTO produto (nome, autor, valor, categoria) 
+VALUES ('A Batalha da Fé', 'Kenneth Hagin', 17.99, 1);
+
+-- Insert 15
+INSERT INTO produto (nome, autor, valor, categoria) 
+VALUES ('A Mulher V', 'Pastor Hernandes Dias Lopes', 27.50, 1);
+
+-- Insert 16
+INSERT INTO produto (nome, autor, valor, categoria) 
+VALUES ('Bênçãos do Quebrantamento', 'Nancy Leigh DeMoss', 24.99, 1);
+
+-- Insert 17
+INSERT INTO produto (nome, autor, valor, categoria) 
+VALUES ('Fala Sério, Mãe!', 'Thalita Rebouças', 14.99, 1);
+
+-- Insert 18
+INSERT INTO produto (nome, autor, valor, categoria) 
+VALUES ('Uma Mulher Sábia', 'Dee Brestin', 21.99, 1);
+
+-- Insert 19
+INSERT INTO produto (nome, autor, valor, categoria) 
+VALUES ('A Batalha da Mente', 'Joyce Meyer', 23.50, 1);
