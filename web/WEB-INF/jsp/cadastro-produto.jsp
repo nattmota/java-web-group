@@ -70,12 +70,11 @@
             <br/>
         </header>
         <main>
-            <!-- <div class="center-text">
+            <div class="center-text">
                 <h1>Cadastro de Produtos</h1>
-            </div> -->
+            </div> 
             <div class="form-cadastro-produtos">
-                <form action="">
-                    <h1>Cadastro de Produtos</h1>
+                <form action="">                  
                     <div class="input-box">
                         <input type="text" name="nome-livro" id="nome-livro" placeholder="Nome">
                     </div>

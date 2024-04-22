@@ -54,7 +54,7 @@
             <nav class="header-baixo">
                 <ul>
                     <li><a href="#">Início</a></li>
-                    <li><a href="#">Livros <i class="fa-solid fa-chevron-down"></i></a></li>
+                    <li><a href="./produtos-categorias">Livros <i class="fa-solid fa-chevron-down"></i></a></li>
                     <li><a href="#">Papelaria <i class="fa-solid fa-chevron-down"></i></a></li>
                     <li><a href="#">Presentes <i class="fa-solid fa-chevron-down"></i></a></li>
                     <li><a href="#">Bíblias <i class="fa-solid fa-chevron-down"></i></a></li>
@@ -96,7 +96,7 @@
             </section>
             <section class="show-products">
                 <div class="h1-text">
-                    <h1>Destaques</h1>
+                    <h1>DESTAQUES</h1>
                 </div>
                 <div class="card-products">
                     <c:forEach items="${produtos}" var="produto">
@@ -109,6 +109,7 @@
                                 </div>    
                                 <div class="center-element">
                                     <a href="#" class="btn btn-primary">ADICIONAR</a>
+                                    <a href="./produtos?id=${produto.idProduto}" class="btn btn-primary">VISITAR</a>
                                 </div>
                             </div>
                         </div>

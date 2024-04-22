@@ -4,6 +4,7 @@
     Author     : Senai
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -58,7 +59,7 @@
             <hr/>
             <nav class="header-baixo">
                 <ul>
-                    <li><a href="#">Início</a></li>
+                    <li><a href="./home">Início</a></li>
                     <li><a href="#">Livros <i class="fa-solid fa-chevron-down"></i></a></li>
                     <li><a href="#">Papelaria <i class="fa-solid fa-chevron-down"></i></a></li>
                     <li><a href="#">Presentes <i class="fa-solid fa-chevron-down"></i></a></li>
@@ -71,12 +72,28 @@
             <br/>
         </header>
 
-        <main>
-            <div class="center-text">
-                <h1>Produtos/Categorias</h1>
+        <section class="show-products">
+            <div class="h1-text">
+                <h1>LIVROS</h1>
             </div>
-        </main>
-
+            <div class="card-products">
+                <c:forEach items="${produtos}" var="produto">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./assets/livro1.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>${produto.nome}</b></h5>
+                            <div class="center-element">
+                                <h5 class="card-price" >R$ ${produto.valor}</h5>
+                            </div>    
+                            <div class="center-element">
+                                <a href="#" class="btn btn-primary">ADICIONAR</a>
+                                <a href="./produtos" class="btn btn-primary">VISITAR</a>
+                            </div>
+                        </div>
+                    </div>
+                </c:forEach>
+            </div>
+        </section>
         <section class="upper-footer">
             <div class="column-dp">
                 <h4>Departamentos</h4>

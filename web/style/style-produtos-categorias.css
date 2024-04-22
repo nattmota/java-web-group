@@ -8,12 +8,52 @@
     box-sizing: border-box;
 }
 
-main {
-   background-color: #ecf0f1;
-   height: 50vh;
+.show-products {
+    width: 100%;
+    background-color: #ecf0f1;
 }
 
-main .center-text {
+.show-products h1 {
+    color: #00326D;
+    font-size: 55px;
+    font-family: "Rubik", sans-serif;
+}
+
+.show-products .h1-text {
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+}
+
+.card {
+    margin: 30px 50px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.card-products {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.card-body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-body .card-price {
+    color: green;
+    font-size: 30px;
+    margin: 30px 0;
+}
+
+.card-body .center-element {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }

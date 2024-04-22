@@ -177,7 +177,7 @@ public class ProdutoDAO {
             ResultSet rs = null;
 
             stmt = conexao.prepareStatement("SELECT * FROM produto WHERE idProduto = ?");
-
+            stmt.setInt(1, id);
             rs = stmt.executeQuery();
 
             if (rs.next()) {

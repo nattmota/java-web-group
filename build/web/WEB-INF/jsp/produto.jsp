@@ -70,8 +70,31 @@
         <br/>
     </header>
     <main>
-        <div class="center-text">
-            <h1>PRODUTOS</h1>
+        <div class="container-produto">
+            <div class="right-box">
+                <div class="image-box">
+                    <img src="${produto.imagem}" alt="produto" id="mainImage" class="main-image">
+                </div>
+            </div>
+            <div class="detalhes-box">
+                <h1>${produto.nome}</h1>
+                <p>Avaliação (Em estoque)</p>
+                <h2>R$ ${produto.valor}</h2>
+                <table cellspacing="0" class="inputs">
+                    <tr>
+                        <td><b>Quantidade</b></td>
+                        <td align="right"><input type="number" id="primeiro"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Sub Total</b></td>
+                        <td align="right"><input type="number" id="segundo"></td>
+                    </tr>
+                </table>
+                <h4>Especificações</h4>
+                <p>Para mais informações do produto, entre em contato com a loja. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus repellat ipsum aperiam minima
+                 facere provident saepe quidem, officia quae iste ad totam autem doloremque perferendis nihil harum dolorem soluta eaque.</p>
+                <button>Adicionar ao Carrinho</button>
+            </div>
         </div>
     </main>
     <section class="upper-footer">
