@@ -70,8 +70,9 @@ public class CadastroController extends HttpServlet {
             u.setEmail(request.getParameter("email"));
             u.setCpf(request.getParameter("cpf"));
             u.setTelefone(request.getParameter("telefone"));
-            
-            try {
+                              
+            try {             
+               
                 dao.cadastro(u);
                 RequestDispatcher d = getServletContext().getRequestDispatcher(nextPage);
                 d.forward(request, response);

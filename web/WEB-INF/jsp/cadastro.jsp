@@ -53,5 +53,5 @@
             </div>
         </main>
     </body>
-    <script src="js/validation.js" type="text/javascript"></script>
+    <!-- <script src="js/validation.js" type="text/javascript"></script> -->
 </html>
