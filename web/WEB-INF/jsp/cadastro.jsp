@@ -16,32 +16,33 @@
     <body>
         <main>
             <div class="cadastro">
-                <form action="cadastrar" method="post">
+                <form id="form" action="cadastrar" method="post">
                     <h1>Cadastro</h1>                   
                     <div class="input-box">                        
                         <input type="text" name="usuario" id="usuario" placeholder="Usuário">        
-                        <i class="fa-regular fa-user"></i>               
+                        <i class="fa-regular fa-user"></i>   
+                        <div class="error"></div>            
                     </div>
                     <div class="input-box">                        
                         <input type="text" name="senha" id="senha" placeholder="Senha">
                         <i class="fa-solid fa-lock"></i>
+                        <div class="error"></div>    
                     </div>
                     <div class="input-box">
                         <input type="text" name="email" id="email" placeholder="Email">
                         <i class="fa-solid fa-envelope"></i>
+                        <div class="error"></div>    
                     </div>
                     <div class="input-box">
                         <input type="text" name="cpf" id="cpf" placeholder="CPF">
                         <i class="fa-solid fa-key"></i>
+                        <div class="error"></div>    
                     </div>
                     <div class="input-box">
                         <input type="text" name="telefone" id="telefone" placeholder="Telefone">
                         <i class="fa-solid fa-phone"></i>
-                    </div>
-
-                    <div class="remember-register">
-                        <label><input type="checkbox">Lembrar de mim</label>                      
-                    </div>
+                        <div class="error"></div>    
+                    </div>                  
 
                     <button type="submit" class="btn">CADASTRAR</button>
 
@@ -52,4 +53,5 @@
             </div>
         </main>
     </body>
+    <script src="js/validation.js" type="text/javascript"></script>
 </html>
