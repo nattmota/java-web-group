@@ -8,6 +8,4 @@ servlet but should be the only JSP outside of WEB-INF.
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <% response.sendRedirect("./home"); %>
 
-<link href="style/footer.css" rel="stylesheet" type="text/css"/>
-<link href="style/header.css" rel="stylesheet" type="text/css"/>
-<link href="style/style-cadastro-produto.css" rel="stylesheet" type="text/css"/>
+

@@ -1,18 +1,24 @@
+<%-- 
+    Document   : papelaria
+    Created on : 23/04/2024, 13:10:17
+    Author     : natan
+--%>
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
-<html lang="pt-br">
-    <head>        
-        <meta charset="UTF-8">
+<!DOCTYPE html>
+<html>
+    <head>
         <script src="https://kit.fontawesome.com/6f0f753ce6.js" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link href="./style/style-index.css" rel="stylesheet" type="text/css"/>
+        <link href="./style/style-produtos-categorias.css" rel="stylesheet" type="text/css"/>
         <link href="./style/header.css" rel="stylesheet" type="text/css"/>
         <link href="./style/footer.css" rel="stylesheet" type="text/css"/>
-        <title>Komunhão Livraria</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Papelaria</title>
     </head>
-
     <body>
         <div class="upper-header">
             <div class="icons-upper-header">
@@ -53,7 +59,7 @@
             <hr/>
             <nav class="header-baixo">
                 <ul>
-                    <li><a href="#">Início</a></li>
+                    <li><a href="./home">Início</a></li>
                     <li><a href="./produtos-categorias">Livros <i class="fa-solid fa-chevron-down"></i></a></li>
                     <li><a href="./papelaria">Papelaria <i class="fa-solid fa-chevron-down"></i></a></li>
                     <li><a href="./biblias">Bíblias <i class="fa-solid fa-chevron-down"></i></a></li>
@@ -64,78 +70,28 @@
             </nav>
             <br/>
         </header>
-        <main>
-            <section class="carrosel">
-                <div id="carouselExampleIndicators" class="carousel slide"> 
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="./assets/carrosel-komunhao.webp" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./assets/carrosel-komunhao2.webp" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="./assets/carrosel-komunaho3.webp" class="d-block w-100" alt="...">
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button> 
-                </div> 
-            </section>
-            <section class="show-products">
-                <div class="h1-text">
-                    <h1>DESTAQUES</h1>
-                </div>
-                <div class="card-products">
-                    <c:forEach items="${produtos}" var="produto">
-                        <div class="card" style="width: 18rem;">
-                            <img src="./assets/livro1.webp" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-ti---------tle"><b>${produto.nome}</b></h5>
-                                <div class="center-element">
-                                    <h5 class="card-price" >R$ ${produto.valor}</h5>
-                                </div>    
-                                <div class="center-element">
-                                    <a href="#" class="btn btn-primary">ADICIONAR</a>
-                                    <a href="./produtos?id=${produto.idProduto}" class="btn btn-primary">VISITAR</a>
-                                </div>
+        <section class="show-products">
+            <div class="h1-text">
+                <h1>PAPELARIA</h1>
+            </div>
+            <div class="card-products">
+                <c:forEach items="${produtos}" var="produto">
+                    <div class="card" style="width: 18rem;">
+                        <img src="./assets/livro1.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>${produto.nome}</b></h5>
+                            <div class="center-element">
+                                <h5 class="card-price" >R$ ${produto.valor}</h5>
+                            </div>    
+                            <div class="center-element">
+                                <a href="#" class="btn btn-primary">ADICIONAR</a>
+                                <a href="./produtos?id=${produto.idProduto}" class="btn btn-primary">VISITAR</a>
                             </div>
                         </div>
-                    </c:forEach>
-                </div>
-            </section>
-            <section class="email-section">
-                <div class="newsletter">
-                    <h3>NEWSLETTER</h3>
-                    <h2>Receba todas as promoções</h2>
-                    <p>Quer receber nossas ofertas? Cadastre-se e comece a recebê-las!</p>
-                    <div class="input-box">
-                        <i class="fa-solid fa-arrow-right"></i>
-                        <input type="text" placeholder="E-mail">
                     </div>
-                </div>
-            </section>
-            <section class="instagram-section">
-                <div class="to-instagram">
-                    <div class="tag-insta">
-                        <h2><i class="fa-brands fa-instagram"></i>komunhaolivraria</p> 
-                    </div>   
-                    <h3>Estamos no instagram</h3>
-                    <button><b><a href="https://www.instagram.com/komunhaolivraria/">SIGA-NOS</a></b></button>
-                </div>
-            </section>
-        </main>
+                </c:forEach>
+            </div>
+        </section>
         <section class="upper-footer" id="footer">
             <div class="column-dp">
                 <h4>Departamentos</h4>
@@ -188,6 +144,5 @@
                 <span>Copyright KOMUNHÃO LIVRARIA CRISTÃ - 20860874000126 - 2024. Todos os direitos reservados.</span>
             </div>
         </footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
 </html>

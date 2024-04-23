@@ -27,17 +27,17 @@
                 <p>Edificando vidas através da literatura cristã</p>
             </div>
         </div>
-    <header>
-        <div class="header-cima">
-            <div class="logo">
-                <a href="./home"><img src="./assets/Logo Site Komunhão.png" alt="logo-livraria"></a>
-            </div>
-            <div class="input-box">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" placeholder="O que você está buscando?" >
-            </div>
+        <header>
+            <div class="header-cima">
+                <div class="logo">
+                    <a href="./home"><img src="./assets/Logo Site Komunhão.png" alt="logo-livraria"></a>
+                </div>
+                <div class="input-box">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="O que você está buscando?" >
+                </div>
 
-            <nav class="nav-1">         
+                <nav class="nav-1">         
                     <ul>
                         <div class="element-nav-1">
                             <li><i class="fa-regular fa-comments"></i><a href="./login">Login</a></li>
@@ -53,101 +53,101 @@
                         </div>
                     </ul>
                 </nav>
-        </div>
-        <hr/>
-        <nav class="header-baixo">
-            <ul>
-                <li><a href="./home">Início</a></li>
-                <li><a href="#">Livros <i class="fa-solid fa-chevron-down"></i></a></li>
-                <li><a href="#">Papelaria <i class="fa-solid fa-chevron-down"></i></a></li>
-                <li><a href="#">Presentes <i class="fa-solid fa-chevron-down"></i></a></li>
-                <li><a href="#">Bíblias <i class="fa-solid fa-chevron-down"></i></a></li>
-                <li><a href="#">Brinquedos Educativos <i class="fa-solid fa-chevron-down"></i></a></li>
-                <li><a href="#">Quem somos</a></li>
-                <li><a href="#">Contato</a></li>                
-            </ul>
-        </nav>
-        <br/>
-    </header>
-    <main>
-        <div class="container-produto">
-            <div class="right-box">
-                <div class="image-box">
-                    <img src="${produto.imagem}" alt="produto" id="mainImage" class="main-image">
+            </div>
+            <hr/>
+            <nav class="header-baixo">
+                <ul>
+                    <li><a href="./home">Início</a></li>
+                    <li><a href="./produtos-categorias">Livros <i class="fa-solid fa-chevron-down"></i></a></li>
+                    <li><a href="./papelaria">Papelaria <i class="fa-solid fa-chevron-down"></i></a></li>
+                    <li><a href="./biblias">Bíblias <i class="fa-solid fa-chevron-down"></i></a></li>
+                    <li><a href="./brinquedos">Brinquedos Educativos <i class="fa-solid fa-chevron-down"></i></a></li>
+                    <li><a href="#">Quem somos</a></li>
+                    <li><a href="#footer">Contato</a></li>                
+                </ul>
+            </nav>
+            <br/>
+        </header>
+        <main>
+            <div class="container-produto">
+                <div class="right-box">
+                    <div class="image-box">
+                        <img src="${produto.imagem}" alt="produto" id="mainImage" class="main-image">
+                    </div>
+                </div>
+                <div class="detalhes-box">
+                    <h1>${produto.nome}</h1>
+                    <p>Avaliação (Em estoque)</p>
+                    <h2>R$ ${produto.valor}</h2>
+                    <table cellspacing="0" class="inputs">
+                        <tr>
+                            <td><b>Quantidade</b></td>
+                            <td align="right"><input type="number" id="primeiro"></td>
+                        </tr>
+                        <tr>
+                            <td><b>Sub Total</b></td>
+                            <td align="right"><input type="number" id="segundo"></td>
+                        </tr>
+                    </table>
+                    <h4>Especificações</h4>
+                    <p>Para mais informações do produto, entre em contato com a loja. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus repellat ipsum aperiam minima
+                        facere provident saepe quidem, officia quae iste ad totam autem doloremque perferendis nihil harum dolorem soluta eaque.</p>
+                    <button>Adicionar ao Carrinho</button>
                 </div>
             </div>
-            <div class="detalhes-box">
-                <h1>${produto.nome}</h1>
-                <p>Avaliação (Em estoque)</p>
-                <h2>R$ ${produto.valor}</h2>
-                <table cellspacing="0" class="inputs">
-                    <tr>
-                        <td><b>Quantidade</b></td>
-                        <td align="right"><input type="number" id="primeiro"></td>
-                    </tr>
-                    <tr>
-                        <td><b>Sub Total</b></td>
-                        <td align="right"><input type="number" id="segundo"></td>
-                    </tr>
-                </table>
-                <h4>Especificações</h4>
-                <p>Para mais informações do produto, entre em contato com a loja. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus repellat ipsum aperiam minima
-                 facere provident saepe quidem, officia quae iste ad totam autem doloremque perferendis nihil harum dolorem soluta eaque.</p>
-                <button>Adicionar ao Carrinho</button>
+        </main>
+        <section class="upper-footer" id="footer">
+            <div class="column-dp">
+                <h4>Departamentos</h4>
+                <p><a href="#">Início</a></p>
+                <p><a href="#">Livros</a></p>
+                <p><a href="#">Presentes</a></p>
+                <p><a href="#">Bíblias</a></p>
+                <p><a href="#">Brinquedos educativos</a></p>
+                <p><a href="#">Quem somos</a></p>
+                <p><a href="#">Contato</a></p>
             </div>
-        </div>
-    </main>
-    <section class="upper-footer">
-        <div class="column-dp">
-            <h4>Departamentos</h4>
-            <p><a href="#">Início</a></p>
-            <p><a href="#">Livros</a></p>
-            <p><a href="#">Presentes</a></p>
-            <p><a href="#">Bíblias</a></p>
-            <p><a href="#">Brinquedos educativos</a></p>
-            <p><a href="#">Quem somos</a></p>
-            <p><a href="#">Contato</a></p>
-        </div>
-        <div class="column-empresa">
-            <h4>Diretrizes da empresa</h4>
-            <p><a href="#">Missão, Visão, Valores</a></p>
-            <p><a href="#">Como Comprar</a></p>
-            <p><a href="#">Trocas e Devoluções</a></p>
-            <p><a href="#">Perguntas Frequentes</a></p>
-            <p><a href="#">Política de Privacidade</a></p>
-            <p><a href="#">Termos de Uso</a></p>
-            <p><a href="#">Política de Reembolso</a></p>
-        </div>
-        <div class="contato">
-            <h4>Entre em contato</h4>
-            <div class="div-contato">
-                <a href=""><i class="fa-brands fa-whatsapp"></i>5543999752103</a>
+            <div class="column-empresa">
+                <h4>Diretrizes da empresa</h4>
+                <p><a href="#">Missão, Visão, Valores</a></p>
+                <p><a href="#">Como Comprar</a></p>
+                <p><a href="#">Trocas e Devoluções</a></p>
+                <p><a href="#">Perguntas Frequentes</a></p>
+                <p><a href="#">Política de Privacidade</a></p>
+                <p><a href="#">Termos de Uso</a></p>
+                <p><a href="#">Política de Reembolso</a></p>
             </div>
-            <br/>
-            <div class="div-contato">
-                <a href=""><i class="fa-solid fa-phone"></i>(43) 3028-3484</a>
+            <div class="contato">
+                <h4>Entre em contato</h4>
+                <div class="div-contato">
+                    <a href=""><i class="fa-brands fa-whatsapp"></i>5543999752103</a>
+                </div>
+                <br/>
+                <div class="div-contato">
+                    <a href=""><i class="fa-solid fa-phone"></i>(43) 3028-3484</a>
+                </div>
+                <br/>
+                <div class="div-contato">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>contato@komunhao.com.br</span>
+                </div>
+                <br/>
+                <div class="div-contato">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Rua Barão de Loreto, 15 Vila Fujita - Londrina - PR</span>
+                </div>
             </div>
-            <br/>
-            <div class="div-contato">
-                <i class="fa-solid fa-envelope"></i>
-                <span>contato@komunhao.com.br</span>
+            <div class="sociais">
+                <h4>Permaneça conectado</h4>
+                <button><a href="#"><i class="fa-brands fa-instagram"></i></a></button>
+                <button><a href="#"><i class="fa-brands fa-facebook"></i></a></button>
             </div>
-            <br/>
-            <div class="div-contato">
-                <i class="fa-solid fa-location-dot"></i>
-                <span>Rua Barão de Loreto, 15 Vila Fujita - Londrina - PR</span>
+        </section>
+        <footer>
+            <div class="text-footer">
+                <span>Copyright KOMUNHÃO LIVRARIA CRISTÃ - 20860874000126 - 2024. Todos os direitos reservados.</span>
             </div>
-        </div>
-        <div class="sociais">
-            <h4>Permaneça conectado</h4>
-            <button><a href="#"><i class="fa-brands fa-instagram"></i></a></button>
-            <button><a href="#"><i class="fa-brands fa-facebook"></i></a></button>
-        </div>
-    </section>
-    <footer>
-        <div class="text-footer">
-            <span>Copyright KOMUNHÃO LIVRARIA CRISTÃ - 20860874000126 - 2024. Todos os direitos reservados.</span>
-        </div>
-    </footer>
+        </footer>
+        <!-- <script src="js/js1.js" type="text/javascript"></script> -->
     </body>
 </html>

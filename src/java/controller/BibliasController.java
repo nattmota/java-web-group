@@ -18,9 +18,9 @@ import model.dao.ProdutoDAO;
 
 /**
  *
- * @author Senai
+ * @author natan
  */
-public class ProdutoCategoriasController extends HttpServlet {
+public class BibliasController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,11 +33,11 @@ public class ProdutoCategoriasController extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        response.setContentType("text/html;charset=UTF-8");
-        String url = "/WEB-INF/jsp/pag-livros.jsp";
-            
+        response.setContentType("text/html;charset=UTF-8");       
+        String url = "/WEB-INF/jsp/biblias.jsp";
+        
         ProdutoDAO dao = new ProdutoDAO();
-        List<Produto> produtoLista = dao.listarPorCategoriaLivros();
+        List<Produto> produtoLista = dao.listarPorCategoriaBiblia();
         
         request.setAttribute("produtos", produtoLista);
         

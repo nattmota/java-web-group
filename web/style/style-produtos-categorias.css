@@ -13,10 +13,10 @@
     background-color: #ecf0f1;
 }
 
-.show-products h1 {
+.show-products .h1-text h1 {
     color: #00326D;
     font-size: 55px;
-    font-family: "Rubik", sans-serif;
+    font-family: "Roboto Slab", sans-serif;
 }
 
 .show-products .h1-text {
@@ -44,6 +44,15 @@
     display: grid;
     justify-content: center;
     align-items: center;
+}
+
+.card-body .card-title {
+    display: flex;
+    justify-content: center;
+}
+
+.card-body h5 {
+    font-family: "Rubik", sans-serif;
 }
 
 .card-body .card-price {

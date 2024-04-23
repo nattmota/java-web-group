@@ -50,6 +50,15 @@ main {
     align-items: center;
 }
 
+.card-body .card-title {
+    display: flex;
+    justify-content: center;
+}
+
+.card-body h5 {
+    font-family: "Rubik", sans-serif;
+}
+
 .card-body .card-price {
     color: green;
     font-size: 30px;

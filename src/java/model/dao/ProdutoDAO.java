@@ -10,7 +10,6 @@ import java.util.List;
 import model.bean.Categoria;
 import model.bean.Produto;
 
-
 public class ProdutoDAO {
 
     public List<Produto> listarTodosDisponiveis() {
@@ -75,7 +74,7 @@ public class ProdutoDAO {
         }
         return produtos;
     }
-    
+
     public List<Produto> listarTodos8() {
         List<Produto> produtos = new ArrayList();
 
@@ -83,7 +82,14 @@ public class ProdutoDAO {
             Connection conexao = Conexao.conectar();
             PreparedStatement stmt = null;
             ResultSet rs = null;
-            String query = "SELECT * FROM produto WHERE categoria = 1 LIMIT 8";
+            String query = "(SELECT * FROM produto WHERE categoria = 1 LIMIT 2)\n"
+                    + "UNION ALL\n"
+                    + "(SELECT * FROM produto WHERE categoria = 2 LIMIT 2)\n"
+                    + "UNION ALL\n"
+                    + "(SELECT * FROM produto WHERE categoria = 3 LIMIT 2)\n"
+                    + "UNION ALL\n"
+                    + "(SELECT * FROM produto WHERE categoria = 4 LIMIT 2)\n"
+                    + "LIMIT 8;";
 
             stmt = conexao.prepareStatement(query);
             rs = stmt.executeQuery();
@@ -107,17 +113,99 @@ public class ProdutoDAO {
         return produtos;
     }
 
-    public List<Produto> listarPorCategoria(Categoria c) {
+    public List<Produto> listarPorCategoriaLivros() {
         List<Produto> produtos = new ArrayList();
         try {
             Connection conexao = Conexao.conectar();
             PreparedStatement stmt = null;
             ResultSet rs = null;
-            String query = "SELECT * FROM produto AS p INNER JOIN categoria AS c ON p.categoria = c.idCategoria WHERE c.nome = ?";
+            String query = "SELECT * FROM produto WHERE categoria = 1";
+
+            stmt = conexao.prepareStatement(query);       
+            rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                Produto p = new Produto();
+                p.setIdProduto(rs.getInt("idProduto"));
+                p.setNome(rs.getString("nome"));
+                p.setCategoria(rs.getInt("categoria"));
+                p.setValor(rs.getFloat("valor"));
+                produtos.add(p);
+            }
+            rs.close();
+            stmt.close();
+            conexao.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return produtos;
+    }
+
+    public List<Produto> listarPorCategoriaPapelaria() {
+        List<Produto> produtos = new ArrayList();
+        try {
+            Connection conexao = Conexao.conectar();
+            PreparedStatement stmt = null;
+            ResultSet rs = null;
+            String query = "SELECT * FROM produto WHERE categoria = 2";
 
             stmt = conexao.prepareStatement(query);
-            stmt.setString(1, c.getNome());
+            rs = stmt.executeQuery();
 
+            while (rs.next()) {
+                Produto p = new Produto();
+                p.setIdProduto(rs.getInt("idProduto"));
+                p.setNome(rs.getString("nome"));
+                p.setCategoria(rs.getInt("categoria"));
+                p.setValor(rs.getFloat("valor"));
+                produtos.add(p);
+            }
+            rs.close();
+            stmt.close();
+            conexao.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return produtos;
+    }
+
+    public List<Produto> listarPorCategoriaBiblia() {
+        List<Produto> produtos = new ArrayList();
+        try {
+            Connection conexao = Conexao.conectar();
+            PreparedStatement stmt = null;
+            ResultSet rs = null;
+            String query = "SELECT * FROM produto WHERE categoria = 3";
+
+            stmt = conexao.prepareStatement(query);
+            rs = stmt.executeQuery();
+
+            while (rs.next()) {
+                Produto p = new Produto();
+                p.setIdProduto(rs.getInt("idProduto"));
+                p.setNome(rs.getString("nome"));
+                p.setCategoria(rs.getInt("categoria"));
+                p.setValor(rs.getFloat("valor"));
+                produtos.add(p);
+            }
+            rs.close();
+            stmt.close();
+            conexao.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return produtos;
+    }
+
+    public List<Produto> listarPorCategoriaBrinquedo() {
+        List<Produto> produtos = new ArrayList<>();
+        try {
+            Connection conexao = Conexao.conectar();
+            PreparedStatement stmt = null;
+            ResultSet rs = null;
+            String query = "SELECT * FROM produto WHERE categoria = 4";
+
+            stmt = conexao.prepareStatement(query);
             rs = stmt.executeQuery();
 
             while (rs.next()) {
@@ -154,7 +242,7 @@ public class ProdutoDAO {
                 p.setIdProduto(rs.getInt("idProduto"));
                 p.setNome(rs.getString("nome"));
                 p.setCategoria(rs.getInt("categoria"));
-                p.setValor(rs.getFloat("valor"));               
+                p.setValor(rs.getFloat("valor"));
                 produtos.add(p);
             }
 
@@ -184,7 +272,7 @@ public class ProdutoDAO {
                 p.setIdProduto(rs.getInt("idProduto"));
                 p.setNome(rs.getString("nome"));
                 p.setCategoria(rs.getInt("categoria"));
-                p.setValor(rs.getFloat("valor"));                
+                p.setValor(rs.getFloat("valor"));
             }
             rs.close();
             stmt.close();

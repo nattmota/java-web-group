@@ -57,14 +57,13 @@
             <hr/>
             <nav class="header-baixo">
                 <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Livros <i class="fa-solid fa-chevron-down"></i></a></li>
-                    <li><a href="#">Papelaria <i class="fa-solid fa-chevron-down"></i></a></li>
-                    <li><a href="#">Presentes <i class="fa-solid fa-chevron-down"></i></a></li>
-                    <li><a href="#">Bíblias <i class="fa-solid fa-chevron-down"></i></a></li>
-                    <li><a href="#">Brinquedos Educativos <i class="fa-solid fa-chevron-down"></i></a></li>
+                    <li><a href="./home">Início</a></li>
+                    <li><a href="./produtos-categorias">Livros <i class="fa-solid fa-chevron-down"></i></a></li>
+                    <li><a href="./papelaria">Papelaria <i class="fa-solid fa-chevron-down"></i></a></li>
+                    <li><a href="./biblias">Bíblias <i class="fa-solid fa-chevron-down"></i></a></li>
+                    <li><a href="./brinquedos">Brinquedos Educativos <i class="fa-solid fa-chevron-down"></i></a></li>
                     <li><a href="#">Quem somos</a></li>
-                    <li><a href="#">Contato</a></li>                
+                    <li><a href="#footer">Contato</a></li>                
                 </ul>
             </nav>
             <br/>
@@ -94,7 +93,7 @@
                 </form>
             </div>
         </main>
-        <section class="upper-footer">
+        <section class="upper-footer" id="footer">
             <div class="column-dp">
                 <h4>Departamentos</h4>
                 <p><a href="#">Início</a></p>

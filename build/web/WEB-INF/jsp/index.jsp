@@ -55,12 +55,11 @@
                 <ul>
                     <li><a href="#">Início</a></li>
                     <li><a href="./produtos-categorias">Livros <i class="fa-solid fa-chevron-down"></i></a></li>
-                    <li><a href="#">Papelaria <i class="fa-solid fa-chevron-down"></i></a></li>
-                    <li><a href="#">Presentes <i class="fa-solid fa-chevron-down"></i></a></li>
-                    <li><a href="#">Bíblias <i class="fa-solid fa-chevron-down"></i></a></li>
-                    <li><a href="#">Brinquedos Educativos <i class="fa-solid fa-chevron-down"></i></a></li>
+                    <li><a href="./papelaria">Papelaria <i class="fa-solid fa-chevron-down"></i></a></li>
+                    <li><a href="./biblias">Bíblias <i class="fa-solid fa-chevron-down"></i></a></li>
+                    <li><a href="./brinquedos">Brinquedos Educativos <i class="fa-solid fa-chevron-down"></i></a></li>
                     <li><a href="#">Quem somos</a></li>
-                    <li><a href="#">Contato</a></li>                
+                    <li><a href="#footer">Contato</a></li>                
                 </ul>
             </nav>
             <br/>
@@ -103,7 +102,7 @@
                         <div class="card" style="width: 18rem;">
                             <img src="./assets/livro1.webp" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title"><b>${produto.nome}</b></h5>
+                                <h5 class="card-ti---------tle"><b>${produto.nome}</b></h5>
                                 <div class="center-element">
                                     <h5 class="card-price" >R$ ${produto.valor}</h5>
                                 </div>    
@@ -137,7 +136,7 @@
                 </div>
             </section>
         </main>
-        <section class="upper-footer">
+        <section class="upper-footer" id="footer">
             <div class="column-dp">
                 <h4>Departamentos</h4>
                 <p><a href="#">Início</a></p>

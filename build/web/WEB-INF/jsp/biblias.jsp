@@ -1,7 +1,7 @@
 <%-- 
-    Document   : ProdutosCategorias
-    Created on : 15/04/2024, 15:44:18
-    Author     : Senai
+    Document   : biblias
+    Created on : 23/04/2024, 13:10:25
+    Author     : natan
 --%>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -9,7 +9,6 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
         <script src="https://kit.fontawesome.com/6f0f753ce6.js" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -17,7 +16,8 @@
         <link href="./style/style-produtos-categorias.css" rel="stylesheet" type="text/css"/>
         <link href="./style/header.css" rel="stylesheet" type="text/css"/>
         <link href="./style/footer.css" rel="stylesheet" type="text/css"/>
-        <title>Página de Produtos/Categorias</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
     </head>
     <body>
         <div class="upper-header">
@@ -60,21 +60,19 @@
             <nav class="header-baixo">
                 <ul>
                     <li><a href="./home">Início</a></li>
-                    <li><a href="#">Livros <i class="fa-solid fa-chevron-down"></i></a></li>
-                    <li><a href="#">Papelaria <i class="fa-solid fa-chevron-down"></i></a></li>
-                    <li><a href="#">Presentes <i class="fa-solid fa-chevron-down"></i></a></li>
-                    <li><a href="#">Bíblias <i class="fa-solid fa-chevron-down"></i></a></li>
-                    <li><a href="#">Brinquedos Educativos <i class="fa-solid fa-chevron-down"></i></a></li>
+                    <li><a href="./produtos-categorias">Livros <i class="fa-solid fa-chevron-down"></i></a></li>
+                    <li><a href="./papelaria">Papelaria <i class="fa-solid fa-chevron-down"></i></a></li>
+                    <li><a href="./biblias">Bíblias <i class="fa-solid fa-chevron-down"></i></a></li>
+                    <li><a href="./brinquedos">Brinquedos Educativos <i class="fa-solid fa-chevron-down"></i></a></li>
                     <li><a href="#">Quem somos</a></li>
-                    <li><a href="#">Contato</a></li>                
+                    <li><a href="#footer">Contato</a></li>                
                 </ul>
             </nav>
             <br/>
         </header>
-
         <section class="show-products">
             <div class="h1-text">
-                <h1>LIVROS</h1>
+                <h1>BIBLIAS</h1>
             </div>
             <div class="card-products">
                 <c:forEach items="${produtos}" var="produto">
@@ -87,14 +85,14 @@
                             </div>    
                             <div class="center-element">
                                 <a href="#" class="btn btn-primary">ADICIONAR</a>
-                                <a href="./produtos" class="btn btn-primary">VISITAR</a>
+                                <a href="./produtos?id=${produto.idProduto}" class="btn btn-primary">VISITAR</a>
                             </div>
                         </div>
                     </div>
                 </c:forEach>
             </div>
         </section>
-        <section class="upper-footer">
+        <section class="upper-footer" id="footer">
             <div class="column-dp">
                 <h4>Departamentos</h4>
                 <p><a href="#">Início</a></p>
