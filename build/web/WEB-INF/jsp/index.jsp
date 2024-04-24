@@ -102,7 +102,7 @@
                         <div class="card" style="width: 18rem;">
                             <img src="./assets/livro1.webp" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-ti---------tle"><b>${produto.nome}</b></h5>
+                                <h5 class="card-title"><b>${produto.nome}</b></h5>
                                 <div class="center-element">
                                     <h5 class="card-price" >R$ ${produto.valor}</h5>
                                 </div>    

@@ -4,6 +4,7 @@
     Author     : Senai
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -84,13 +85,24 @@
                         <input type="text" name="valor" id="valor" placeholder="Preço">
                     </div>
                     <div class="input-box">
-                        <input type="text" name="categoria" id="categoria" placeholder="Categoria">
+                        <select name="categoria" id="categoria">
+                            <c:forEach items="${categorias}" var="categoria">
+                                <option value="">${categoria.nome}</option>
+                            </c:forEach>
+                         
+
+                        </select>
                     </div>
                     <div class="input-image">
-
-                    </div>
-                    <button>ADICIONAR</button>
+                        <input type= "file">                       
+                        <input type="submit" value="Adicionar imagem">
+                    </div>                   
                 </form>
+                <div class="right-box">
+                    <div class="image-box">
+                        <img src="" alt="" id="mainImage" class="main-image">
+                    </div>
+                </div>
             </div>
         </main>
         <section class="upper-footer" id="footer">

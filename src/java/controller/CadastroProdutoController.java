@@ -7,11 +7,14 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.bean.Categoria;
+import model.dao.CategoriaDAO;
 
 /**
  *
@@ -32,6 +35,10 @@ public class CadastroProdutoController extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
+        CategoriaDAO dao = new CategoriaDAO();
+        
+        List<Categoria> categoria = dao.listarTodos();
+        request.setAttribute("categorias", categoria);
         String url = "/WEB-INF/jsp/cadastro-produto.jsp";
         
         RequestDispatcher d = getServletContext().getRequestDispatcher(url);

@@ -17,6 +17,11 @@
         <main>
             <div class="cadastro">
                 <form id="form" action="cadastrar" method="post">
+                    <% if (request.getAttribute("errorMessage") != null) {%>
+                    <div class="error-message">
+                        <%= request.getAttribute("errorMessage") %>
+                    </div>
+                    <% }%>
                     <h1>Cadastro</h1>                   
                     <div class="input-box">                        
                         <input type="text" name="usuario" id="usuario" placeholder="Usuário">        

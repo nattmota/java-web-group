@@ -60,28 +60,50 @@ public class CadastroController extends HttpServlet {
             throws ServletException, IOException {
         
         String url = request.getServletPath();
+        
         if(url.equals("/cadastrar")) {
+            
             String nextPage = "/WEB-INF/jsp/login.jsp";
+            
+            String usuario = request.getParameter("usuario");
+            String senha = request.getParameter("senha");
+            String email = request.getParameter("email");
+            String cpf = request.getParameter("cpf");
+            String telefone = request.getParameter("telefone");
+            
+            if (usuario == null || usuario.isEmpty() ||
+                senha == null || senha.isEmpty() ||
+                email == null || email.isEmpty() ||
+                cpf == null || cpf.isEmpty() ||
+                telefone == null || telefone.isEmpty()) {
+                
+                nextPage = "/WEB-INF/jsp/cadastro.jsp";
+                request.setAttribute("errorMessage", "Por favor, preencha todos os campos!");
+                RequestDispatcher d = getServletContext().getRequestDispatcher(nextPage);
+                d.forward(request, response);
+                return;
+            }
+            
             Usuario u = new Usuario();
             UsuarioDAO dao = new UsuarioDAO();
             
-            u.setNome(request.getParameter("usuario"));
-            u.setSenha(request.getParameter("senha"));
-            u.setEmail(request.getParameter("email"));
-            u.setCpf(request.getParameter("cpf"));
-            u.setTelefone(request.getParameter("telefone"));
+            u.setNome(usuario);
+            u.setSenha(senha);
+            u.setEmail(email);
+            u.setCpf(cpf);
+            u.setTelefone(telefone);
                               
-            try {             
-               
+            try {                      
                 dao.cadastro(u);
                 RequestDispatcher d = getServletContext().getRequestDispatcher(nextPage);
                 d.forward(request, response);
                               
             }catch(Exception e) {
-                nextPage = "/WEB-INF/jsp/login.jsp";
+                nextPage = "/WEB-INF/jsp/cadastro.jsp";
                 request.setAttribute("errorMessage", "Usuário ou senha inválidos");
                 RequestDispatcher d = getServletContext().getRequestDispatcher(nextPage);
                 d.forward(request, response);
+                return;
             }
         } else {
             processRequest(request, response);
