@@ -64,21 +64,21 @@ public class ProdutoDAO {
                 p.setIdProduto(rs.getInt("idProduto"));
                 p.setNome(rs.getString("nome"));
                 p.setValor(rs.getFloat("valor"));
-                if(rs.getBlob("imagem") == null) {
-                    String stmt2  = "select * from produto where idProduto = 1";
-                    PreparedStatement stmt3 = conexao.prepareStatement(stmt2);
-                    r2 = stmt3.executeQuery();
-                    if(r2.next()){
-                        p.setImagem(r2.getBlob("imagem"));
-                    } 
-                } else{
-                    p.setImagem(rs.getBlob("imagem"));
-                }
+                // if(rs.getBlob("imagem") == null) {
+                //     String stmt2  = "select * from produto where idProduto = 1";
+                //     PreparedStatement stmt3 = conexao.prepareStatement(stmt2);
+                //     r2 = stmt3.executeQuery();
+                //     if(r2.next()){
+                //         p.setImagem(r2.getBlob("imagem"));
+                //     } 
+                // } else{
+                //     p.setImagem(rs.getBlob("imagem"));
+                // }
                 produtos.add(p);
             }
 
             rs.close();
-            r2.close();
+            //r2.close();
             stmt.close();
             conexao.close();
 
@@ -326,6 +326,24 @@ public class ProdutoDAO {
             stmt.setFloat(2, p.getValor());
             stmt.setBlob(3, p.getImagem());
             stmt.setInt(4, p.getCategoria());
+            stmt.setInt(5, p.getIdProduto());
+
+            stmt.executeUpdate();
+
+            stmt.close();
+            conexao.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    public void updateImg(Produto p) {
+        try {
+            Connection conexao = Conexao.conectar();
+            PreparedStatement stmt = null;
+
+            stmt = conexao.prepareStatement("UPDATE produto SET imagem = ? WHERE idProduto = ?");          
+            stmt.setBlob(3, p.getImagem());           
             stmt.setInt(5, p.getIdProduto());
 
             stmt.executeUpdate();

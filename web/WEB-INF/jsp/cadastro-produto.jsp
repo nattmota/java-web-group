@@ -74,7 +74,14 @@
                 <h1>Cadastro de Produtos</h1>
             </div> 
             <div class="form-cadastro-produtos">
-                <form action="">                  
+                <form action="">
+                    <div class="input-box">
+                        <select name="idProduto" id="idProduto">
+                            <c:forEach items="${ids}" var="id">
+                                <option value="">${id.idProduto}</option>
+                            </c:forEach>                        
+                        </select>
+                    </div>                  
                     <div class="input-box">
                         <input type="text" name="nome-livro" id="nome-livro" placeholder="Nome">
                     </div>
@@ -88,13 +95,11 @@
                         <select name="categoria" id="categoria">
                             <c:forEach items="${categorias}" var="categoria">
                                 <option value="">${categoria.nome}</option>
-                            </c:forEach>
-                         
-
+                            </c:forEach>                        
                         </select>
                     </div>
                     <div class="input-image">
-                        <input type= "file">                       
+                        <input type= "file" name="image">                       
                         <input type="submit" value="Adicionar imagem">
                     </div>                   
                 </form>
