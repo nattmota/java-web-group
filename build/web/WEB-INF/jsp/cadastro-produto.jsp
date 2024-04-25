@@ -74,14 +74,14 @@
                 <h1>Cadastro de Produtos</h1>
             </div> 
             <div class="form-cadastro-produtos">
-                <form action="">
+                <form action="CadastroProdutoController" method="post" enctype="multipart/form-data">
                     <div class="input-box">
                         <select name="idProduto" id="idProduto">
                             <c:forEach items="${ids}" var="id">
                                 <option value="">${id.idProduto}</option>
-                            </c:forEach>                        
+                            </c:forEach>
                         </select>
-                    </div>                  
+                    </div>
                     <div class="input-box">
                         <input type="text" name="nome-livro" id="nome-livro" placeholder="Nome">
                     </div>
@@ -95,17 +95,18 @@
                         <select name="categoria" id="categoria">
                             <c:forEach items="${categorias}" var="categoria">
                                 <option value="">${categoria.nome}</option>
-                            </c:forEach>                        
+                            </c:forEach>
                         </select>
                     </div>
                     <div class="input-image">
-                        <input type= "file" name="image">                       
+                        <label for="image">Imagem:</label>
+                        <input type="file" name="image" id="image">
                         <input type="submit" value="Adicionar imagem">
-                    </div>                   
+                    </div>
                 </form>
                 <div class="right-box">
                     <div class="image-box">
-                        <img src="" alt="" id="mainImage" class="main-image">
+                        <img src="" alt="Imagem do produto" id="mainImage" class="main-image">
                     </div>
                 </div>
             </div>

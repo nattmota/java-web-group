@@ -1,6 +1,7 @@
 package model.dao;
 
 import conexao.Conexao;
+import java.sql.Blob;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -338,22 +339,22 @@ public class ProdutoDAO {
     }
     
     public void updateImg(Produto p) {
-        try {
-            Connection conexao = Conexao.conectar();
-            PreparedStatement stmt = null;
+    try {
+        Connection conexao = Conexao.conectar();
+        PreparedStatement stmt = null;
 
-            stmt = conexao.prepareStatement("UPDATE produto SET imagem = ? WHERE idProduto = ?");          
-            stmt.setBlob(3, p.getImagem());           
-            stmt.setInt(5, p.getIdProduto());
+        stmt = conexao.prepareStatement("UPDATE produto SET imagem = ? WHERE idProduto = ?");          
+        stmt.setBlob(1, p.getImagem());           
+        stmt.setInt(2, p.getIdProduto());
 
-            stmt.executeUpdate();
+        stmt.executeUpdate();
 
-            stmt.close();
-            conexao.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+        stmt.close();
+        conexao.close();
+    } catch (SQLException e) {
+        e.printStackTrace();
     }
+}
 
     public void delete(int id) {
         try {
