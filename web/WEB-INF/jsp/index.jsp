@@ -42,7 +42,7 @@
                             <li><i class="fa-regular fa-user"></i><a href="#">Minha conta</a></li>
                         </div>
                         <div class="element-nav-1">
-                            <li><i class="fa-solid fa-cart-shopping"></i><a href="#">Meu carrinho</a></li>
+                            <li><i class="fa-solid fa-cart-shopping"></i><a href="./carrinho">Meu carrinho</a></li>
                         </div>
                         <div class="element-nav-1">
                             <li><i class="fa-solid fa-right-from-bracket"></i><a href="./login">Logout</a></li>

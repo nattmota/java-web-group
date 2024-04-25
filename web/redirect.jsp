@@ -9,4 +9,5 @@ servlet but should be the only JSP outside of WEB-INF.
 <% response.sendRedirect("./home"); %>
 
 
-<script src="js/validation.js" type="text/javascript"></script>
+
+<link href="style/style-carrinho.css" rel="stylesheet" type="text/css"/>

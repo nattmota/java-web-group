@@ -52,6 +52,10 @@
         <servlet-name>BrinquedosController</servlet-name>
         <servlet-class>controller.BrinquedosController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CarrinhoController</servlet-name>
+        <servlet-class>controller.CarrinhoController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>*.htm</url-pattern>
@@ -103,6 +107,10 @@
     <servlet-mapping>
         <servlet-name>BrinquedosController</servlet-name>
         <url-pattern>/brinquedos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CarrinhoController</servlet-name>
+        <url-pattern>/carrinho</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

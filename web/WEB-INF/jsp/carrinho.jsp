@@ -1,21 +1,20 @@
 <%-- 
-    Document   : produto
-    Created on : 15/04/2024, 15:45:11
-    Author     : Senai
+    Document   : carrinho
+    Created on : 25/04/2024, 17:03:59
+    Author     : natan
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
-<html lang="pt-br">
+<!DOCTYPE html>
+<html>
     <head>
-        <meta charset="UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://kit.fontawesome.com/6f0f753ce6.js" crossorigin="anonymous"></script>     
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link href="./style/style-produto.css" rel="stylesheet" type="text/css"/>
         <link href="./style/header.css" rel="stylesheet" type="text/css"/>
-        <link href="./style/footer.css" rel="stylesheet" type="text/css"/>       
-        <title>Página do Produto</title>
+        <link href="./style/footer.css" rel="stylesheet" type="text/css"/>
+        <link href="./style/style-carrinho.css" rel="stylesheet" type="text/css"/> 
+        <title>Página de Carrinho</title>
     </head>
     <body>
         <div class="upper-header">
@@ -46,7 +45,7 @@
                             <li><i class="fa-regular fa-user"></i><a href="#">Minha conta</a></li>
                         </div>
                         <div class="element-nav-1">
-                            <li><i class="fa-solid fa-cart-shopping"></i><a href="./carrinho">Meu carrinho</a></li>
+                            <li><i class="fa-solid fa-cart-shopping"></i><a href="#">Meu carrinho</a></li>
                         </div>
                         <div class="element-nav-1">
                             <li><i class="fa-solid fa-right-from-bracket"></i><a href="./login">Logout</a></li>
@@ -69,31 +68,38 @@
             <br/>
         </header>
         <main>
-            <div class="container-produto">
-                <div class="right-box">
-                    <div class="image-box">
-                        <img src="${produto.imagem}" alt="produto" id="mainImage" class="main-image">
-                    </div>
-                </div>
-                <div class="detalhes-box">
-                    <h1>${produto.nome}</h1>
-                    <p>Avaliação (Em estoque)</p>
-                    <h2>R$ ${produto.valor}</h2>
-                    <table cellspacing="0" class="inputs">
+            <div class="container my-3">
+                <div class="d-flex py-3"><h3>Total Price: $ ${(total>0)?dcf.format(total):0} </h3> <a class="mx-3 btn btn-primary" href="cart-check-out">Check Out</a></div>
+                <table class="table table-light">
+                    <thead>
                         <tr>
-                            <td><b>Quantidade</b></td>
-                            <td align="right"><input type="number" id="primeiro"></td>
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Buy Now</th>
+                            <th>Cancel</th>
                         </tr>
+                    </thead>
+                    <tbody>                       
                         <tr>
-                            <td><b>Sub Total</b></td>
-                            <td align="right"><input type="number" id="segundo"></td>
-                        </tr>
-                    </table>
-                    <h4>Especificações</h4>
-                    <p>Para mais informações do produto, entre em contato com a loja. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus repellat ipsum aperiam minima
-                        facere provident saepe quidem, officia quae iste ad totam autem doloremque perferendis nihil harum dolorem soluta eaque.</p>
-                    <button>Adicionar ao Carrinho</button>
-                </div>
+                            <td>NOME</td>
+                            <td>CATEGORIA</td>
+                            <td>PRECO</td>
+                            <td>
+                                <form action="order-now" method="post" class="form-inline">
+                                    <input type="hidden" name="id" value="" class="form-input">
+                                    <div class="form-group d-flex justify-content-between">
+                                        <a class="btn bnt-sm btn-incre" href="#">+<i class="fas fa-plus-square"></i></a> 
+                                        <input type="text" name="quantity" class="form-control"  value="" readonly> 
+                                        <a class="btn btn-sm btn-decre" href="#">-<i class="fas fa-minus-square"></i></a>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-sm">Buy</button>
+                                </form>
+                            </td>
+                            <td><a href="#" class="btn btn-sm btn-danger">Remove</a></td>
+                        </tr>                 
+                    </tbody>
+                </table>
             </div>
         </main>
         <section class="upper-footer" id="footer">
@@ -148,6 +154,5 @@
                 <span>Copyright KOMUNHÃO LIVRARIA CRISTÃ - 20860874000126 - 2024. Todos os direitos reservados.</span>
             </div>
         </footer>
-        <!-- <script src="js/js1.js" type="text/javascript"></script> -->
     </body>
 </html>
