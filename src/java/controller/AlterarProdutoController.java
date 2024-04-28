@@ -1,22 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package controller;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.PrintWriter;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.bean.Categoria;
 import model.bean.Produto;
-import model.dao.CategoriaDAO;
 import model.dao.ProdutoDAO;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.FileUploadException;
@@ -25,9 +19,9 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 
 /**
  *
- * @author Senai
+ * @author natan
  */
-public class CadastroProdutoController extends HttpServlet {
+public class AlterarProdutoController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -41,20 +35,16 @@ public class CadastroProdutoController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-
-        CategoriaDAO dao = new CategoriaDAO();
-
-        List<Categoria> categoria = dao.listarTodos();
-        request.setAttribute("categorias", categoria);
-
+        
+        String url = "/WEB-INF/jsp/alterar-produto.jsp";
+        
         ProdutoDAO daoId = new ProdutoDAO();
         List<Produto> idLista = daoId.listarTodos();
         request.setAttribute("ids", idLista);
-
-        String url = "/WEB-INF/jsp/cadastro-produto.jsp";
-
+        
         RequestDispatcher d = getServletContext().getRequestDispatcher(url);
         d.forward(request, response);
+       
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -83,7 +73,7 @@ public class CadastroProdutoController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
+       
         if (ServletFileUpload.isMultipartContent(request)) {
             try {
                 // Parseia a requisição para obter os itens do formulário
@@ -96,18 +86,9 @@ public class CadastroProdutoController extends HttpServlet {
                     if (item.isFormField()) {
                         // Se sim, verifica o nome do campo e define o valor do produto de acordo
                         switch (item.getFieldName()) {
-                            case "nome":
-                                produto.setNome(item.getString());
-                                break;
-                            case "autor":
-                                produto.setAutor(item.getString());
-                                break;
-                            case "valor":
-                                produto.setValor(Float.parseFloat(item.getString()));
-                                break;                         
-                            case "input-categoria":
-                                produto.setCategoria(Integer.parseInt(item.getString()));
-                                break;                          
+                            case "id-produto":
+                                produto.setIdProduto(Integer.parseInt(item.getString()));
+                                break;                                       
                         }
                     } else {
                         // Se não, o item é um arquivo de imagem
@@ -129,7 +110,7 @@ public class CadastroProdutoController extends HttpServlet {
                 }
                 // Após processar todos os itens do formulário, insere o produto no banco de dados
                 ProdutoDAO dao = new ProdutoDAO();
-                boolean sucesso = dao.inserirProduto(produto);
+                boolean sucesso = dao.updateImg(produto);
                 if (sucesso) {
                     // Se a inserção for bem-sucedida, redireciona para a página de produtos
                     redirectToSuccessPage(request, response);
@@ -147,23 +128,23 @@ public class CadastroProdutoController extends HttpServlet {
             redirectToIndexPage(request, response);
         }   
     }
-
-    private void redirectToSuccessPage(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    
+     private void redirectToSuccessPage(HttpServletRequest request, HttpServletResponse response) throws IOException {
         // Redireciona para a página de produtos
-        response.sendRedirect(request.getContextPath() + "/home");
+        response.sendRedirect(request.getContextPath() + "/alterar-produto");
     }
 
     private void redirectToErrorPage(HttpServletRequest request, HttpServletResponse response) throws IOException {
         // Redireciona para a página de erro
-        response.sendRedirect(request.getContextPath() + "/cadastro-produto");
+        response.sendRedirect(request.getContextPath() + "/home");
     }
 
     private void redirectToIndexPage(HttpServletRequest request, HttpServletResponse response) throws IOException {
         // Redireciona para a página inicial
         response.sendRedirect(request.getContextPath() + "/index.jsp");
     }
-    
-    
+
+   
     @Override
     public String getServletInfo() {
         return "Short description";

@@ -56,6 +56,10 @@
         <servlet-name>CarrinhoController</servlet-name>
         <servlet-class>controller.CarrinhoController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AlterarProdutoController</servlet-name>
+        <servlet-class>controller.AlterarProdutoController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>*.htm</url-pattern>
@@ -97,6 +101,10 @@
         <url-pattern>/cadastro-produto</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+        <servlet-name>CadastroProdutoController</servlet-name>
+        <url-pattern>/CadastrarProduto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
         <servlet-name>PapelariaController</servlet-name>
         <url-pattern>/papelaria</url-pattern>
     </servlet-mapping>
@@ -111,6 +119,14 @@
     <servlet-mapping>
         <servlet-name>CarrinhoController</servlet-name>
         <url-pattern>/carrinho</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AlterarProdutoController</servlet-name>
+        <url-pattern>/alterar-produto</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AlterarProdutoController</servlet-name>
+        <url-pattern>/UpdateProduto</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

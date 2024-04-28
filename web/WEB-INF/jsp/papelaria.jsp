@@ -77,7 +77,16 @@
             <div class="card-products">
                 <c:forEach items="${produtos}" var="produto">
                     <div class="card" style="width: 18rem;">
-                        <img src="./assets/livro1.webp" class="card-img-top" alt="...">
+                        <c:choose>
+                            <c:when test="${produto.imagemBase64 == null}">
+                                <img src="./assets/livro1.webp" class="card-img-top" alt="...">
+                            </c:when>
+                            <c:otherwise>
+                                <div class="imagem-left">
+                                    <img src="data:image/jpeg;base64,${produto.imagemBase64}" class="card-img-top" alt="${produto.nome}">
+                                </div>
+                            </c:otherwise>
+                        </c:choose> 
                         <div class="card-body">
                             <h5 class="card-title"><b>${produto.nome}</b></h5>
                             <div class="center-element">

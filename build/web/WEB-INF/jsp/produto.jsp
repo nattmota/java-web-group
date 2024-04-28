@@ -72,7 +72,7 @@
             <div class="container-produto">
                 <div class="right-box">
                     <div class="image-box">
-                        <img src="${produto.imagem}" alt="produto" id="mainImage" class="main-image">
+                           <img src="data:image/jpeg;base64,${produto.imagemBase64}" class="card-img-top" alt="${produto.nome}">
                     </div>
                 </div>
                 <div class="detalhes-box">

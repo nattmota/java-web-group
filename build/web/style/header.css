@@ -13,6 +13,7 @@
 header {
     background-color: #00326D;
     height: 22vh;
+    width: auto;
 }
 
 .upper-header {

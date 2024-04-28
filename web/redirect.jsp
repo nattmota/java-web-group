@@ -10,4 +10,4 @@ servlet but should be the only JSP outside of WEB-INF.
 
 
 
-<link href="style/style-carrinho.css" rel="stylesheet" type="text/css"/>
+<link href="style/style-alterar-produto.css" rel="stylesheet" type="text/css"/>

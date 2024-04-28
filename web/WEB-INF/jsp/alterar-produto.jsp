@@ -1,21 +1,22 @@
 <%-- 
-    Document   : produto
-    Created on : 15/04/2024, 15:45:11
-    Author     : Senai
+    Document   : alterar-produto
+    Created on : 28/04/2024, 13:20:24
+    Author     : natan
 --%>
 
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
-<html lang="pt-br">
+<!DOCTYPE html>
+<html>
     <head>
-        <meta charset="UTF-8">
+        <script src="https://kit.fontawesome.com/6f0f753ce6.js" crossorigin="anonymous"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://kit.fontawesome.com/6f0f753ce6.js" crossorigin="anonymous"></script>     
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link href="./style/style-produto.css" rel="stylesheet" type="text/css"/>
+        <link href="./style/footer.css" rel="stylesheet" type="text/css"/>
         <link href="./style/header.css" rel="stylesheet" type="text/css"/>
-        <link href="./style/footer.css" rel="stylesheet" type="text/css"/>       
-        <title>Página do Produto</title>
+        <link href="./style/style-alterar-produto.css" rel="stylesheet" type="text/css"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Update Produto</title>
     </head>
     <body>
         <div class="upper-header">
@@ -69,30 +70,29 @@
             <br/>
         </header>
         <main>
-            <div class="container-produto">
+            <div class="center-text">
+                <h1>Alterar de Produtos</h1>
+            </div> 
+            <div class="form-alterar-produtos">
+                <form action="UpdateProduto" method="post" name="formUpdateProduto" enctype="multipart/form-data">
+                    <div class="input-box-2">
+                        <select name="idProduto" id="idProduto">
+                            <c:forEach items="${ids}" var="id">
+                                <option value="">ID ${id.idProduto}</option>
+                            </c:forEach>
+                        </select>
+                        <input type="text" name="id-produto" id="id-produto" placeholder="Insira o ID do Produto">
+                    </div>                   
+                    <div class="input-image">
+                        <label for="image">Imagem:</label>
+                        <input type="file" id="imagem" name="imagem" required accept="image/*">
+                        <input type="submit" value="Adicionar imagem">
+                    </div>
+                </form>
                 <div class="right-box">
                     <div class="image-box">
-                           <img src="data:image/jpeg;base64,${produto.imagemBase64}" class="card-img-top" alt="${produto.nome}">
+                        <img src="" alt="Imagem do produto" id="mainImage" class="main-image">
                     </div>
-                </div>
-                <div class="detalhes-box">
-                    <h1>${produto.nome}</h1>
-                    <p>Avaliação (Em estoque)</p>
-                    <h2>R$ ${produto.valor}</h2>
-                    <table cellspacing="0" class="inputs">
-                        <tr>
-                            <td><b>Quantidade</b></td>
-                            <td align="right"><input type="number" id="primeiro"></td>
-                        </tr>
-                        <tr>
-                            <td><b>Sub Total</b></td>
-                            <td align="right"><input type="number" id="segundo"></td>
-                        </tr>
-                    </table>
-                    <h4>Especificações</h4>
-                    <p>Para mais informações do produto, entre em contato com a loja. Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus repellat ipsum aperiam minima
-                        facere provident saepe quidem, officia quae iste ad totam autem doloremque perferendis nihil harum dolorem soluta eaque.</p>
-                    <button>Adicionar ao Carrinho</button>
                 </div>
             </div>
         </main>
@@ -147,7 +147,6 @@
             <div class="text-footer">
                 <span>Copyright KOMUNHÃO LIVRARIA CRISTÃ - 20860874000126 - 2024. Todos os direitos reservados.</span>
             </div>
-        </footer>
-        <!-- <script src="js/js1.js" type="text/javascript"></script> -->
+        </footer>      
     </body>
 </html>

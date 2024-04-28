@@ -4,7 +4,7 @@
     Author     : Senai
 --%>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -74,33 +74,27 @@
                 <h1>Cadastro de Produtos</h1>
             </div> 
             <div class="form-cadastro-produtos">
-                <form action="CadastroProdutoController" method="post" enctype="multipart/form-data">
+                <form action="CadastrarProduto" method="post" name="formCadastroProduto" enctype="multipart/form-data">               
                     <div class="input-box">
-                        <select name="idProduto" id="idProduto">
-                            <c:forEach items="${ids}" var="id">
-                                <option value="">${id.idProduto}</option>
-                            </c:forEach>
-                        </select>
+                        <input type="text" name="nome" id="nome" placeholder="Nome">
                     </div>
                     <div class="input-box">
-                        <input type="text" name="nome-livro" id="nome-livro" placeholder="Nome">
-                    </div>
-                    <div class="input-box">
-                        <input type="text" name="autor-livro" id="autor-livro" placeholder="Autor">
+                        <input type="text" name="autor" id="autor" placeholder="Autor">
                     </div>
                     <div class="input-box">
                         <input type="text" name="valor" id="valor" placeholder="Preço">
                     </div>
-                    <div class="input-box">
+                    <div class="input-box-2">
                         <select name="categoria" id="categoria">
                             <c:forEach items="${categorias}" var="categoria">
-                                <option value="">${categoria.nome}</option>
+                                <option value="">CATEGORIA ${categoria.nome}</option>
                             </c:forEach>
                         </select>
+                        <input type="text" name="input-categoria" id="input-categoria" placeholder="Insira o ID da Categoria">
                     </div>
                     <div class="input-image">
                         <label for="image">Imagem:</label>
-                        <input type="file" name="image" id="image">
+                        <input type="file" id="imagem" name="imagem" required accept="image/*">
                         <input type="submit" value="Adicionar imagem">
                     </div>
                 </form>

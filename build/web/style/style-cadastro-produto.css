@@ -33,7 +33,27 @@ main .form-cadastro-produtos {
 
 main .form-cadastro-produtos .input-box {
     padding: 20px 0;
+    width: 100%;
 }
+
+main .form-cadastro-produtos .input-box-2 {
+    display: flex;
+    padding: 20px 0;
+}
+
+main .form-cadastro-produtos .input-box-2 select {     
+    padding: 20px 5px;
+    height: 35px;
+    margin-right: 20px;
+    width: 25%;
+}
+
+main .form-cadastro-produtos .input-box-2 input {
+    padding: 20px 5px;
+    width: 75%;
+    height: 35px;
+}
+
 
 main .form-cadastro-produtos .input-box input {
     padding: 0 10px;
